@@ -1,0 +1,30 @@
+/* Your styles (and Sass) start here */
+.page__inner {
+  height: 1000px;
+  background-color: #f9f9f9; }
+
+.container, .page-header__inner, .page-main__inner {
+  width: 100%;
+  max-width: 1120px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border: 1px solid green; }
+
+.page-header__inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  min-height: 50px; }
+
+.page-main {
+  height: 100%;
+  background-image: url("../images/bg2.svg");
+  background-repeat: no-repeat;
+  background-size: 960px auto;
+  background-position: -10px 0; }

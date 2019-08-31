@@ -1,0 +1,11 @@
+.page-main {
+  height: 100%;
+  background-image: url("../images/bg2.svg");
+  background-repeat: no-repeat;
+  background-size: 960px auto;
+  background-position: -10px 0;
+
+  &__inner {
+    @extend .container;
+  }
+}

@@ -1,9 +1,11 @@
 .page-header {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  background-color: $white;
 
-  &__inner {
+  .page-header-select {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    min-height: 50px;
+    justify-content: flex-end;
   }
 }

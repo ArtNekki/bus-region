@@ -2116,14 +2116,21 @@ template {
   height: 1000px;
   background-color: #f9f9f9; }
 
-.page-header__inner {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  min-height: 50px; }
+.page-header {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  background-color: #ffffff; }
+  .page-header .page-header-select {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
+
+.select--header {
+  margin-top: -20px;
+  width: 180px; }
 
 .page-main {
   text-align: center;

@@ -17,6 +17,10 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     size = require('gulp-size'),
     ghPages = require('gulp-gh-pages');
+    svgSprite = require('gulp-svg-sprite'),
+    svgmin = require('gulp-svgmin'),
+    cheerio = require('gulp-cheerio'),
+    replace = require('gulp-replace');
 
 
 gulp.task('styles', function() {
@@ -46,15 +50,15 @@ gulp.task('scripts', function() {
 
 // Optimizes the images that exists
 gulp.task('images', function () {
-  return gulp.src('src/images/**')
-    .pipe(changed('public/images'))
+  return gulp.src('src/images/content/**')
+    .pipe(changed('public/images/content'))
     .pipe(imagemin({
       // Lossless conversion to progressive JPGs
       progressive: true,
       // Interlace GIFs for progressive rendering
       interlaced: true
     }))
-    .pipe(gulp.dest('public/images'))
+    .pipe(gulp.dest('public/images/content'))
     .pipe(size({title: 'images'}));
 });
 
@@ -63,7 +67,43 @@ gulp.task('html', function() {
     .pipe(gulp.dest('public/'))
 });
 
-gulp.task('browser-sync', ['styles', 'scripts'], function() {
+gulp.task('svg', () => {
+  const svgPath = {
+        'input': './src/images/svg/*.svg',
+        'output': './public/images/svg/'
+    };
+
+    return gulp.src(svgPath.input)
+        .pipe(svgmin({
+            js2svg: {
+                pretty: true
+            }
+        }))
+        .pipe(cheerio({
+            run: function ($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: {xmlMode: true}
+        }))
+        .pipe(replace('&gt;', '>'))
+        .pipe(svgSprite({
+            mode: {
+                symbol: {
+                    sprite: "sprite.svg"
+                }
+            }
+        }))
+        .pipe(gulp.dest(svgPath.output));
+});
+
+gulp.task('fonts', () => {
+    return gulp.src('./src/fonts/**/*.*')
+        .pipe(gulp.dest('./public/fonts/'));
+});
+
+gulp.task('browser-sync', ['styles', 'scripts', 'svg', 'fonts'], function() {
   browserSync({
     server: {
       baseDir: "./public/",
@@ -83,6 +123,10 @@ gulp.task('watch', function() {
   gulp.watch("public/*.html").on('change', browserSync.reload);
   // Watch .sass files
   gulp.watch('src/sass/**/*.scss', ['styles', browserSync.reload]);
+  // Watch fonts files
+  gulp.watch('src/fonts/**/*', ['fonts', browserSync.reload]);
+  // Watch svg-icons
+  gulp.watch('src/images/svg/*.svg', ['svg', browserSync.reload]);
   // Watch .js files
   gulp.watch('src/javascripts/*.js', ['scripts', browserSync.reload]);
   // Watch image files
@@ -90,5 +134,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', function() {
-    gulp.start('styles', 'scripts', 'images', 'html', 'browser-sync', 'watch');
+    gulp.start('styles', 'scripts', 'images', 'svg', 'fonts', 'html', 'browser-sync', 'watch');
 });

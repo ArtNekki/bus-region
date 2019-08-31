@@ -1,11 +1,95 @@
 .page-main {
   height: 100%;
-  background-image: url("../images/bg2.svg");
+  text-align: center;
+  background-image: url("../images/content/bg.svg");
   background-repeat: no-repeat;
-  background-size: 960px auto;
+  background-size: 1540px auto;
   background-position: -10px 0;
 
   &__inner {
     @extend .container;
+  }
+
+  &__title {
+    margin-top: 100px;
+  }
+
+  &__icons {
+    border: 1px solid red;
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__icon {
+    position: relative;
+    display: block;
+    margin-right: 30px;
+    border: 1px solid green;
+    transform: scale(0.8);
+  }
+
+  &__icon-1 {
+    width: 142px;
+    height: 162px;
+    background-image: url('../images/content/top-box-1.png');
+  }
+
+  &__icon-2 {
+    top: -85px;
+    width: 293px;
+    height: 248px;
+    background-image: url('../images/content/top-box-2.png');
+  }
+
+  &__icon-3 {
+    top: -85px;
+    width: 136px;
+    height: 240px;
+    background-image: url('../images/content/top-box-3.png');
+  }
+
+  &__bus {
+    position: relative;
+    transform: translate3d(-1000px, 200px, 0);
+    display: block;
+    width: 148px;
+    height: 74px;
+    background-image: url('../images/svg/bus.svg');
+    background-repeat: no-repeat;
+
+    animation-name: move-bus;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  &__label {
+    position: relative;
+    transform: translate3d(225px, -38px, 0);
+    display: block;
+    width: 348px;
+    height: 74px;
+    opacity: 0;
+    visibility: hidden;
+    background-image: url('../images/svg/bus-label.svg');
+    background-repeat: no-repeat;
+
+    animation: fade-in;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes move-bus {
+  100% {
+    transform: translate3d(68px, 51px, 0);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    visibility: visible;
   }
 }

@@ -1,0 +1,6 @@
+.page-calc {
+
+  &__inner {
+    @extend .container;
+  }
+}

@@ -2,9 +2,11 @@
 
 //Settings
 @import "settings";
+@import "fonts";
 
 //Modules
 @import "modules/page";
 @import "modules/container";
 @import "modules/page-header";
+@import "modules/page-calc";
 @import "modules/page-main";

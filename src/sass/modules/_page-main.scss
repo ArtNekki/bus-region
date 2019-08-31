@@ -1,5 +1,4 @@
 .page-main {
-  height: 100%;
   text-align: center;
   background-image: url("../images/content/bg.svg");
   background-repeat: no-repeat;
@@ -7,7 +6,6 @@
   background-position: -10px 0;
 
   &__inner {
-    @extend .container;
   }
 
   &__title {

@@ -4,9 +4,26 @@
 @import "settings";
 @import "fonts";
 
+//utils
+@import "utils/functions";
+@import "utils/variables";
+@import "utils/utils";
+@import "utils/helpers";
+
+//breakpoints
+@import "utils/breakpoints";
+
+//grid
+@import "grid/grid-framework";
+@import "grid/grid";
+@import "grid";
+
+//libs
+@import "libs";
+
 //Modules
 @import "modules/page";
-@import "modules/container";
 @import "modules/page-header";
 @import "modules/page-calc";
 @import "modules/page-main";
+@import "modules/page-footer";

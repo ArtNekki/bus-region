@@ -9,21 +9,32 @@
 </head>
 <body class="page__inner">
   <header class="page-header">
-    <div class="page-header__inner">
-      <a href="logo" class="logo">Logo</a>
-      <select id="select-city">
-        <option value="kazan">Казань</option>
-        <option value="vladivostok">Владивосток</option>
-      </select>
+    <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-2">
+            <a href="logo" class="logo">Logo</a>
+          </div>
+          <div class="col-lg-2">
+            <select id="select-city">
+              <option value="kazan">Казань</option>
+              <option value="vladivostok">Владивосток</option>
+            </select>
+          </div>
+        </div>
     </div>
   </header>
   <section class="page-calc">
-    <div class="page-calc__inner">
-      <h1 class="page-calc__title">Сверхсрочная<br />доставка от<br />двух часов</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="page-calc__title">Сверхсрочная<br />доставка от<br />двух часов</h1>
+        </div>
+        <div class="col-lg-6"></div>
+      </div>
     </div>
   </section>
   <main class="page-main">
-    <div class="page-main__inner">
+    <div class="container">
         <div class="page-main__bus"></div>
         <div class="page-main__label"></div>
         <div class="page-main__icons">
@@ -33,42 +44,72 @@
         </div>
         <h1 class="page-main__title">Доставляем по республике <br /> и за её пределы от 250 е</h1>
         <button class="page-main__button">Рассчитать доставку</button>
-        <div class="location">
-          <p class="location__text">Узнайте подробнее в одном из наших офисов</p>
-          <div class="location__items">
-            <div class="locatio__item">
+        <p class="page-main__text">Узнайте подробнее в одном из наших офисов</p>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="location bounceInLeft animated delay-4s">
               <h3>Восточный</h3>
               <small>автовокзал</small>
             </div>
-            <div class="locatio__item">
-              <h3>Центральный</h3>
+          </div>
+          <div class="col-lg-4">
+            <div class="location">
+              <h3>Восточный</h3>
               <small>автовокзал</small>
             </div>
-            <div class="locatio__item">
-              <h3>Южный</h3>
+          </div>
+          <div class="col-lg-4">
+            <div class="location">
+              <h3>Восточный</h3>
               <small>автовокзал</small>
             </div>
           </div>
         </div>
-        <div class="details">
-          <div class="details-item">
-            <span>92 автобуса доставляют <br /> ваши посылки каждый день</span>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="detail">
+              <span>92 автобуса доставляют <br /> ваши посылки каждый день</span>
+            </div>
           </div>
-          <div class="details-item">
-            <span>Доставка документов <br /> и грузов от 2 до 36 часов</span>
+          <div class="col-lg-3">
+            <div class="details-item">
+              <span>Доставка документов <br /> и грузов от 2 до 36 часов</span>
+            </div>
           </div>
-          <div class="details-item">
-            <span>Доставка в труднодоступные <br /> населённые пункты республики</span>
+          <div class="col-lg-3">
+            <div class="details-item">
+              <span>Доставка в труднодоступные <br /> населённые пункты республики</span>
+            </div>
           </div>
-          <div class="details-item">
-            <span>СМС услуга уведомления <br /> об отправке</span>
+          <div class="col-lg-3">
+            <div class="details-item">
+              <span>СМС услуга уведомления <br /> об отправке</span>
+            </div>
           </div>
         </div>
     </div>
   </main>
   <footer class='page-footer'>
-    <div class="page-footer-inner">
-
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <small class='page-footer-contact'>
+            <span>Адрес:</span>
+            690039, Приморский край, г.Владивосток, ул. Русская 2а, стр. 3
+          </small>
+        </div>
+        <div class="col-lg-3">
+          <small class='page-footer-contact'>
+            <span>Телефон: 8(423)202-53-74</span>
+          </small>
+        </div>
+        <div class="col-lg-3">
+          <small class='page-footer-contact'>
+            <span>Email: inbox@busbox.guru</span>
+          </small>
+          <a href="#">О компании</a>
+        </div>
+      </div>
     </div>
   </footer>
 </body>

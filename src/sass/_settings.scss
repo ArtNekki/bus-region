@@ -1,8 +1,20 @@
-//colors
+html {
+  box-sizing: border-box;
+}
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+//colors
 $white: #ffffff;
 $black: #000000;
 $gray: #f9f9f9;
+
+//grid
+
 
 body {
   font-family: 'Kelson';

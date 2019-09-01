@@ -1,9 +1,10 @@
 .page-main {
+  padding-bottom: 500px;
   text-align: center;
   background-image: url("../images/content/bg.svg");
   background-repeat: no-repeat;
   background-size: 1540px auto;
-  background-position: -10px 0;
+  background-position: -35px 0;
 
   &-bus {
     position: relative;
@@ -54,6 +55,7 @@
     background-color: $yellow;
     border: none;
     border-radius: 20px;
+    box-shadow: 0 0 30px rgba($black, 0.2);
     cursor: pointer;
 
     &:hover {

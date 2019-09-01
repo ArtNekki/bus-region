@@ -1,0 +1,68 @@
+.detail {
+  position: relative;
+  font-size: 14px;
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+  }
+
+  span {
+    margin-left: 70px;
+    display: inline-block;
+    font-weight: 300;
+  }
+
+  &--bus {
+    &::before {
+      width: 80px;
+      height: 40px;
+      background-image: url("../images/svg/bus-sm.svg");
+    }
+
+    span {
+      margin-left: 90px;
+    }
+  }
+
+  &--time {
+    &::before {
+      width: 56px;
+      height: 53px;
+      background-image: url("../images/svg/time.svg");
+    }
+
+    span {
+      margin-left: 65px;
+    }
+  }
+
+  &--location {
+    &::before {
+      left: -25px;
+      width: 85px;
+      height: 60px;
+      background-image: url("../images/svg/mark.svg");
+    }
+
+    span {
+      margin-left: 70px;
+    }
+  }
+
+  &--sms {
+    &::before {
+      width: 48px;
+      height: 60px;
+      background-image: url("../images/svg/phone.svg");
+    }
+
+    span {
+      margin-left: 50px;
+    }
+  }
+}

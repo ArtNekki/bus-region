@@ -5,49 +5,7 @@
   background-size: 1540px auto;
   background-position: -10px 0;
 
-  &__inner {
-  }
-
-  &__title {
-    margin-top: 100px;
-  }
-
-  &__icons {
-    border: 1px solid red;
-    margin-top: 55px;
-    display: none;
-    justify-content: center;
-  }
-
-  &__icon {
-    position: relative;
-    display: block;
-    margin-right: 30px;
-    border: 1px solid green;
-    transform: scale(0.8);
-  }
-
-  &__icon-1 {
-    width: 142px;
-    height: 162px;
-    background-image: url('../images/content/top-box-1.png');
-  }
-
-  &__icon-2 {
-    top: -85px;
-    width: 293px;
-    height: 248px;
-    background-image: url('../images/content/top-box-2.png');
-  }
-
-  &__icon-3 {
-    top: -85px;
-    width: 136px;
-    height: 240px;
-    background-image: url('../images/content/top-box-3.png');
-  }
-
-  &__bus {
+  &-bus {
     position: relative;
     transform: translate3d(-1000px, 200px, 0);
     display: block;
@@ -61,7 +19,7 @@
     animation-fill-mode: forwards;
   }
 
-  &__label {
+  &-label {
     position: relative;
     transform: translate3d(225px, -38px, 0);
     display: block;
@@ -76,6 +34,31 @@
     animation-duration: 0.5s;
     animation-delay: 3s;
     animation-fill-mode: forwards;
+  }
+
+  &-title {
+    margin-top: 340px;
+    margin-bottom: 45px;
+    font-size: 45px;
+    font-weight: 400;
+  }
+
+  &-text {
+    margin-top: 60px;
+    font-size: 21px;
+  }
+
+  &-button {
+    padding: 40px 70px;
+    font-size: 55px;
+    background-color: $yellow;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lighten($yellow, 10%);
+    }
   }
 }
 

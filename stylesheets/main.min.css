@@ -2155,7 +2155,7 @@ template {
   line-height: 11vw;
   font-weight: 400;
   text-align: center; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .page-promo-title {
       font-size: 76px;
       line-height: 82px;
@@ -2172,7 +2172,7 @@ template {
       z-index: -1;
       background-color: #ffdd00;
       border-radius: 15px; }
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         .page-promo-title span::before {
           top: 15px;
           left: -14px;
@@ -2181,7 +2181,7 @@ template {
 
 .page-promo-form {
   display: none; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .page-promo-form {
       display: block; } }
 
@@ -2239,7 +2239,7 @@ template {
   background-image: url("../images/content/bg-mobile.svg");
   background-size: 100% auto;
   background-repeat: no-repeat; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .page-main {
       padding-top: 0;
       padding-bottom: 500px;
@@ -2248,7 +2248,7 @@ template {
       background-position: -35px 0; } }
   .page-main-bus {
     display: none; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .page-main-bus {
         position: relative;
         transform: translate3d(-1000px, 200px, 0);
@@ -2262,7 +2262,7 @@ template {
         animation-fill-mode: forwards; } }
   .page-main-label {
     display: none; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .page-main-label {
         position: relative;
         transform: translate3d(225px, -38px, 0);
@@ -2283,19 +2283,19 @@ template {
     font-size: 5vw;
     line-height: 8vw;
     font-weight: 400; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .page-main-title {
         margin-top: 340px;
         margin-bottom: 45px;
         font-size: 45px; } }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .page-main-title br {
         display: block; } }
   .page-main-text {
     margin-top: 18vw;
     margin-bottom: 5vw;
     font-size: 5vw; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .page-main-text {
         font-size: 21px; } }
   .page-main-button {
@@ -2306,7 +2306,7 @@ template {
     border-radius: 2vw;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     cursor: pointer; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .page-main-button {
         padding: 40px 70px;
         font-size: 55px;
@@ -2338,7 +2338,7 @@ template {
   text-decoration: none;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   cursor: pointer; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .location {
       margin-bottom: 0; } }
   .location--south {
@@ -2350,12 +2350,12 @@ template {
     font-size: 6vw;
     font-weight: 400;
     text-transform: uppercase; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .location h3 {
         font-size: 40px; } }
   .location small {
     font-size: 3vw; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .location small {
         font-size: 22px; } }
 
@@ -2372,7 +2372,7 @@ template {
       align-items: center;
   font-size: 3vw;
   text-align: left; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .detail {
       margin: 0;
       display: inline-block; } }
@@ -2381,7 +2381,7 @@ template {
     margin-right: 2vw;
     display: inline-block;
     background-repeat: no-repeat; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .detail::before {
         position: absolute;
         top: 50%;
@@ -2393,14 +2393,14 @@ template {
     width: 16vw;
     height: 8vw;
     background-image: url("../images/svg/bus-sm.svg"); }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .detail--bus span {
       margin-left: 90px; } }
   .detail--time::before {
     width: 13vw;
     height: 13vw;
     background-image: url("../images/svg/time.svg"); }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .detail--time span {
       margin-left: 65px; } }
   .detail--location::before {
@@ -2408,14 +2408,14 @@ template {
     width: 18vw;
     height: 13vw;
     background-image: url("../images/svg/mark.svg"); }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .detail--location span {
       margin-left: 70px; } }
   .detail--sms::before {
     width: 10vw;
     height: 11vw;
     background-image: url("../images/svg/phone.svg"); }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .detail--sms span {
       margin-left: 50px; } }
 

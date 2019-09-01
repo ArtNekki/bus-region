@@ -29,7 +29,7 @@ body {
   font-style: normal; }
 
 .u-margin-top-large {
-  margin-top: 70px; }
+  margin-top: 10vw; }
 
 .u-padding-right-0 {
   padding-right: 0 !important; }
@@ -55,7 +55,7 @@ body {
       max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1160px; } }
+      max-width: 1170px; } }
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
   width: 100%;
@@ -78,7 +78,7 @@ body {
 
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1160px; } }
+    max-width: 1170px; } }
 
 .row {
   display: -ms-flexbox;
@@ -2151,21 +2151,39 @@ template {
     display: inline-block; }
 
 .page-promo-title {
-  font-size: 76px;
-  line-height: 82px;
-  font-weight: 400; }
+  font-size: 10vw;
+  line-height: 11vw;
+  font-weight: 400;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .page-promo-title {
+      font-size: 76px;
+      line-height: 82px;
+      text-align: left; } }
   .page-promo-title span {
     position: relative; }
     .page-promo-title span::before {
       content: "";
       position: absolute;
-      top: 15px;
-      left: -14px;
-      right: -14px;
-      bottom: -6px;
+      top: 8px;
+      left: -9px;
+      right: -7px;
+      bottom: -3px;
       z-index: -1;
       background-color: #ffdd00;
       border-radius: 15px; }
+      @media (min-width: 768px) {
+        .page-promo-title span::before {
+          top: 15px;
+          left: -14px;
+          right: -14px;
+          bottom: -6px; } }
+
+.page-promo-form {
+  display: none; }
+  @media (min-width: 768px) {
+    .page-promo-form {
+      display: block; } }
 
 .form {
   margin-top: 20px;
@@ -2215,53 +2233,84 @@ template {
     color: #555555; }
 
 .page-main {
-  padding-bottom: 500px;
+  padding-top: 59vw;
+  padding-bottom: 40vw;
   text-align: center;
-  background-image: url("../images/content/bg.svg");
-  background-repeat: no-repeat;
-  background-size: 1540px auto;
-  background-position: -35px 0; }
+  background-image: url("../images/content/bg-mobile.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat; }
+  @media (min-width: 768px) {
+    .page-main {
+      padding-top: 0;
+      padding-bottom: 500px;
+      background-image: url("../images/content/bg.svg");
+      background-size: 1540px auto;
+      background-position: -35px 0; } }
   .page-main-bus {
-    position: relative;
-    transform: translate3d(-1000px, 200px, 0);
-    display: block;
-    width: 148px;
-    height: 74px;
-    background-image: url("../images/svg/bus.svg");
-    background-repeat: no-repeat;
-    animation-name: move-bus;
-    animation-duration: 3s;
-    animation-fill-mode: forwards; }
+    display: none; }
+    @media (min-width: 768px) {
+      .page-main-bus {
+        position: relative;
+        transform: translate3d(-1000px, 200px, 0);
+        display: block;
+        width: 148px;
+        height: 74px;
+        background-image: url("../images/svg/bus.svg");
+        background-repeat: no-repeat;
+        animation-name: move-bus;
+        animation-duration: 3s;
+        animation-fill-mode: forwards; } }
   .page-main-label {
-    position: relative;
-    transform: translate3d(225px, -38px, 0);
-    display: block;
-    width: 348px;
-    height: 74px;
-    opacity: 0;
-    visibility: hidden;
-    background-image: url("../images/svg/bus-label.svg");
-    background-repeat: no-repeat;
-    animation: fade-in;
-    animation-duration: 0.5s;
-    animation-delay: 3s;
-    animation-fill-mode: forwards; }
+    display: none; }
+    @media (min-width: 768px) {
+      .page-main-label {
+        position: relative;
+        transform: translate3d(225px, -38px, 0);
+        display: block;
+        width: 348px;
+        height: 74px;
+        opacity: 0;
+        visibility: hidden;
+        background-image: url("../images/svg/bus-label.svg");
+        background-repeat: no-repeat;
+        animation: fade-in;
+        animation-duration: 0.5s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards; } }
   .page-main-title {
-    margin-top: 340px;
-    margin-bottom: 45px;
-    font-size: 45px;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    font-size: 5vw;
+    line-height: 8vw;
     font-weight: 400; }
+    @media (min-width: 768px) {
+      .page-main-title {
+        margin-top: 340px;
+        margin-bottom: 45px;
+        font-size: 45px; } }
+    @media (min-width: 768px) {
+      .page-main-title br {
+        display: block; } }
   .page-main-text {
-    margin-top: 60px;
-    font-size: 21px; }
+    margin-top: 18vw;
+    margin-bottom: 5vw;
+    font-size: 5vw; }
+    @media (min-width: 768px) {
+      .page-main-text {
+        font-size: 21px; } }
   .page-main-button {
-    padding: 40px 70px;
-    font-size: 55px;
+    padding: 3vw 6vw;
+    font-size: 6vw;
     background-color: #ffdd00;
     border: none;
-    border-radius: 20px;
+    border-radius: 2vw;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     cursor: pointer; }
+    @media (min-width: 768px) {
+      .page-main-button {
+        padding: 40px 70px;
+        font-size: 55px;
+        border-radius: 20px; } }
     .page-main-button:hover {
       background-color: #ffe433; }
 
@@ -2275,67 +2324,100 @@ template {
     visibility: visible; } }
 
 .location {
-  padding-top: 37px;
-  padding-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5vw;
+  padding-top: 3.5vw;
+  padding-bottom: 3.5vw;
+  border-radius: 2vw;
+  width: 55vw;
   background-color: #555555;
   display: block;
-  border-radius: 10px;
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   cursor: pointer; }
+  @media (min-width: 768px) {
+    .location {
+      margin-bottom: 0; } }
+  .location--south {
+    margin-bottom: 0; }
   .location:hover {
     box-shadow: 0 0 30px rgba(255, 221, 0, 0.3); }
   .location h3 {
     margin: 0;
-    margin-bottom: 10px;
-    font-size: 40px;
+    font-size: 6vw;
     font-weight: 400;
-    line-height: 30px;
     text-transform: uppercase; }
+    @media (min-width: 768px) {
+      .location h3 {
+        font-size: 40px; } }
   .location small {
-    font-size: 22px; }
+    font-size: 3vw; }
+    @media (min-width: 768px) {
+      .location small {
+        font-size: 22px; } }
 
 .detail {
   position: relative;
-  font-size: 14px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 4vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 3vw;
   text-align: left; }
+  @media (min-width: 768px) {
+    .detail {
+      margin: 0;
+      display: inline-block; } }
   .detail::before {
     content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-right: 2vw;
+    display: inline-block;
     background-repeat: no-repeat; }
+    @media (min-width: 768px) {
+      .detail::before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); } }
   .detail span {
-    margin-left: 70px;
     display: inline-block;
     font-weight: 300; }
   .detail--bus::before {
-    width: 80px;
-    height: 40px;
+    width: 16vw;
+    height: 8vw;
     background-image: url("../images/svg/bus-sm.svg"); }
-  .detail--bus span {
-    margin-left: 90px; }
+  @media (min-width: 768px) {
+    .detail--bus span {
+      margin-left: 90px; } }
   .detail--time::before {
-    width: 56px;
-    height: 53px;
+    width: 13vw;
+    height: 13vw;
     background-image: url("../images/svg/time.svg"); }
-  .detail--time span {
-    margin-left: 65px; }
+  @media (min-width: 768px) {
+    .detail--time span {
+      margin-left: 65px; } }
   .detail--location::before {
     left: -25px;
-    width: 85px;
-    height: 60px;
+    width: 18vw;
+    height: 13vw;
     background-image: url("../images/svg/mark.svg"); }
-  .detail--location span {
-    margin-left: 70px; }
+  @media (min-width: 768px) {
+    .detail--location span {
+      margin-left: 70px; } }
   .detail--sms::before {
-    width: 48px;
-    height: 60px;
+    width: 10vw;
+    height: 11vw;
     background-image: url("../images/svg/phone.svg"); }
-  .detail--sms span {
-    margin-left: 50px; }
+  @media (min-width: 768px) {
+    .detail--sms span {
+      margin-left: 50px; } }
 
 .page-footer {
   color: #ffffff;

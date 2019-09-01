@@ -1,9 +1,16 @@
 .page-promo {
 
   &-title {
-    font-size: 76px;
-    line-height: 82px;
+    font-size: 10vw;
+    line-height: 11vw;
     font-weight: 400;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      font-size: 76px;
+      line-height: 82px;
+      text-align: left;
+    }
 
     span {
       position: relative;
@@ -11,14 +18,29 @@
       &::before {
         content: "";
         position: absolute;
-        top: 15px;
-        left: -14px;
-        right: -14px;
-        bottom: -6px;
+        top: 8px;
+        left: -9px;
+        right: -7px;
+        bottom: -3px;
         z-index: -1;
         background-color: $yellow;
         border-radius: 15px;
+
+        @include media-breakpoint-up(md) {
+          top: 15px;
+          left: -14px;
+          right: -14px;
+          bottom: -6px;
+        }
       }
+    }
+  }
+
+  &-form {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
     }
   }
 }

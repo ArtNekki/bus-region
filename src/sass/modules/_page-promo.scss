@@ -1,0 +1,24 @@
+.page-promo {
+
+  &-title {
+    font-size: 76px;
+    line-height: 82px;
+    font-weight: 400;
+
+    span {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: -14px;
+        right: -14px;
+        bottom: -6px;
+        z-index: -1;
+        background-color: $yellow;
+        border-radius: 15px;
+      }
+    }
+  }
+}

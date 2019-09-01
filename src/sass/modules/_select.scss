@@ -1,7 +1,15 @@
 .select {
+  display: block;
+  height: 34px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 22px;
+  color: $gray-dark;
 
   &--header {
     margin-top: -20px;
+    height: 24px;
     width: 180px;
+    display: inline-block;
   }
 }

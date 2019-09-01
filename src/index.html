@@ -25,13 +25,32 @@
         </div>
     </div>
   </header>
-  <section class="page-calc">
+  <section class="page-promo">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <h1 class="page-calc__title">Сверхсрочная<br />доставка от<br />двух часов</h1>
+          <h1 class="page-promo-title">Сверхсрочная<br />доставка от<br /><span>двух</span> часов</h1>
         </div>
-        <div class="col-lg-6"></div>
+        <div class="col-lg-6">
+          <div class="form">
+            <form action="" class="form-main">
+              <h3 class="form-title">Рассчитайте стоимость вашей доставки</h3>
+              <div class="form-group">
+                <label for="selectCity">Отправить из</label>
+                <select name="city" id="city" class="select">
+                  <option value="">Выберите город</option>
+                  <option value="kazan">Казань</option>
+                  <option value="vladivostok">Владивосток</option>
+                </select>
+              </div>
+              <button type="submit" class="form-btn">Рассчитать</button>
+            </form>
+            <div class="form-footer">
+              <span class="form-label">Стоимость доставки</span>
+              <b class="form-cost">0</b>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

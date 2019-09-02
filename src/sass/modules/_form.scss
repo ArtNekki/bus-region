@@ -2,10 +2,15 @@
   margin-top: 1.2vw;
   margin-left: 3vw;
   padding: 1.7vw;
+  display: none;
   background-color: $white;
   border-top: 3px solid $yellow;
   border-radius: 0.7vw;
   box-shadow: 0 0 30px rgba($black, 0.2);
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
 
   @include media-breakpoint-up(xxl) {
     border-top-width: 0.2vw;

@@ -3,8 +3,10 @@
   &-inner {
     @extend .container;
 
-    display: flex;
-    justify-content: space-between;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &-title {
@@ -14,13 +16,13 @@
     text-align: center;
 
     @include media-breakpoint-up(lg) {
-      // margin-top: 1.9vw;
-      // font-size: 4.2vw;
-      // line-height: 4.5vw;
-      margin-top: 30px;
+      margin-top: 1.9vw;
+      font-size: 4.2vw;
+      line-height: 4.5vw;
+      // margin-top: 30px;
       margin-bottom: 0;
-      font-size: 76px;
-      line-height: 82px;
+      // font-size: 76px;
+      // line-height: 82px;
       text-align: left;
     }
 
@@ -30,19 +32,20 @@
       &::before {
         content: "";
         position: absolute;
-        top: 8px;
-        left: -9px;
-        right: -7px;
-        bottom: -3px;
+        top: 2.2vw;
+        left: -1.2vw;
+        right: -1vw;
+        bottom: -0.7vw;
         z-index: -1;
         background-color: $yellow;
-        border-radius: 15px;
+        border-radius: 1.2vw;
 
         @include media-breakpoint-up(lg) {
-          top: 15px;
-          left: -14px;
-          right: -14px;
-          bottom: -6px;
+          top: 0.9vw;
+          left: -0.6vw;
+          right: -0.6vw;
+          bottom: -0.3vw;
+          border-radius: 0.5vw;
         }
       }
     }

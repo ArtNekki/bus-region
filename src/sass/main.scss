@@ -1,22 +1,9 @@
 /* Your styles (and Sass) start here */
 
 //Settings
-@import "settings";
 @import "fonts";
-
-//utils
-@import "utils/functions";
-@import "utils/variables";
-@import "utils/utils";
-@import "utils/helpers";
-
-//breakpoints
+@import "settings";
 @import "utils/breakpoints";
-
-//grid
-@import "grid/grid-framework";
-@import "grid/grid";
-@import "grid";
 
 //libs
 @import "libs";

@@ -2,7 +2,7 @@
   @include media-breakpoint-up(lg) {
     margin-top: 4vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
@@ -17,6 +17,12 @@
   align-items: center;
   font-size: 3vw;
   text-align: left;
+
+  &:not(:last-child) {
+    @include media-breakpoint-up(lg) {
+      margin-right: 2.1vw;
+    }
+  }
 
   @include media-breakpoint-up(lg) {
     margin: 0;
@@ -83,7 +89,7 @@
 
   &--location {
     &::before {
-      left: -25px;
+      left: -1.4vw;
       width: 18vw;
       height: 13vw;
       background-image: url("../images/svg/mark.svg");

@@ -1,4 +1,11 @@
 .page-footer {
   color: $white;
   background-color: $black;
+
+  &-inner {
+    @extend .container;
+
+    display: flex;
+    justify-content: space-between;
+  }
 }

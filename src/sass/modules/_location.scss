@@ -1,3 +1,11 @@
+.locations {
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .location {
   margin-left: auto;
   margin-right: auto;
@@ -16,11 +24,22 @@
   cursor: pointer;
 
   @include media-breakpoint-up(lg) {
+    margin-right: unset;
+    margin-left: unset;
     margin-bottom: 0;
-    padding-top: 35px;
-    padding-bottom: 23px;
+    padding-top: 2vw;
+    padding-bottom: 1.3vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
     width: auto;
     border-radius: 10px;
+  }
+
+  &:nth-child(2) {
+    @include media-breakpoint-up(lg) {
+      margin-right: 3.5vw;
+      margin-left: 3.5vw;
+    }
   }
 
   &--south {
@@ -41,7 +60,8 @@
     text-transform: uppercase;
 
     @include media-breakpoint-up(lg) {
-      font-size: 40px;
+      font-size: 2.2vw;
+      line-height: 2.5vw;
     }
   }
 
@@ -50,7 +70,7 @@
     // font-size: 18px;
 
     @include media-breakpoint-up(lg) {
-      font-size: 22px;
+      font-size: 1.2vw;
     }
   }
 }

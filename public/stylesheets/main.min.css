@@ -2236,21 +2236,15 @@ template {
 .page-main {
   padding-top: 59vw;
   padding-bottom: 40vw;
-  max-width: 1560px;
   text-align: center;
   background-image: url("../images/content/bg-mobile.svg");
   background-size: 100% auto;
   background-repeat: no-repeat; }
   @media (min-width: 992px) {
     .page-main {
-      padding-top: 555px;
-      padding-bottom: 500px;
+      padding-top: 31.6vw;
       background-image: url("../images/content/bg.svg");
-      background-size: cover;
-      background-position: -220px 0; } }
-  @media (min-width: 1200px) {
-    .page-main {
-      padding-top: 505px;
+      background-size: contain;
       background-position: -35px 0; } }
   .page-main-bus {
     display: none; }
@@ -2292,9 +2286,9 @@ template {
     @media (min-width: 992px) {
       .page-main-title {
         margin-top: 0;
-        margin-bottom: 35px;
-        font-size: 45px;
-        line-height: 45px; } }
+        margin-bottom: 2.6vw;
+        font-size: 2.8vw;
+        line-height: 3.5vw; } }
     @media (min-width: 992px) {
       .page-main-title br {
         display: block; } }
@@ -2304,9 +2298,9 @@ template {
     font-size: 5vw; }
     @media (min-width: 992px) {
       .page-main-text {
-        margin-top: 50px;
-        margin-bottom: 30px;
-        font-size: 21px; } }
+        margin-top: 3.5vw;
+        margin-bottom: 2.3vw;
+        font-size: 1.4vw; } }
   .page-main-button {
     padding: 3vw 6vw;
     font-size: 6vw;
@@ -2317,9 +2311,8 @@ template {
     cursor: pointer; }
     @media (min-width: 992px) {
       .page-main-button {
-        padding: 40px 70px;
-        font-size: 55px;
-        border-radius: 20px; } }
+        padding: 1.8vw 3.5vw 2vw;
+        font-size: 3.7vw; } }
     .page-main-button:hover {
       background-color: #ffe433; }
 
@@ -2331,6 +2324,13 @@ template {
   100% {
     opacity: 1;
     visibility: visible; } }
+
+@media (min-width: 992px) {
+  .locations {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; } }
 
 .location {
   margin-left: auto;
@@ -2349,11 +2349,19 @@ template {
   cursor: pointer; }
   @media (min-width: 992px) {
     .location {
+      margin-right: unset;
+      margin-left: unset;
       margin-bottom: 0;
-      padding-top: 35px;
-      padding-bottom: 23px;
+      padding-top: 2vw;
+      padding-bottom: 1.3vw;
+      padding-right: 3vw;
+      padding-left: 3vw;
       width: auto;
       border-radius: 10px; } }
+  @media (min-width: 992px) {
+    .location:nth-child(2) {
+      margin-right: 3.5vw;
+      margin-left: 3.5vw; } }
   .location--south {
     margin-bottom: 0; }
   .location:hover {
@@ -2365,12 +2373,13 @@ template {
     text-transform: uppercase; }
     @media (min-width: 992px) {
       .location h3 {
-        font-size: 40px; } }
+        font-size: 2.2vw;
+        line-height: 2.5vw; } }
   .location small {
     font-size: 3vw; }
     @media (min-width: 992px) {
       .location small {
-        font-size: 22px; } }
+        font-size: 1.2vw; } }
 
 .detail {
   position: relative;

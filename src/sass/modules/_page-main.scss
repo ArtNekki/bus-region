@@ -1,22 +1,17 @@
 .page-main {
   padding-top: 59vw;
   padding-bottom: 40vw;
-  max-width: 1560px;
+  // max-width: 1560px;
   text-align: center;
   background-image: url("../images/content/bg-mobile.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 
   @include media-breakpoint-up(lg) {
-    padding-top: 555px;
-    padding-bottom: 500px;
+    padding-top: 31.6vw;
+    // padding-bottom: 500px;
     background-image: url("../images/content/bg.svg");
-    background-size: cover;
-    background-position: -220px 0;
-  }
-
-  @include media-breakpoint-up(xl) {
-    padding-top: 505px;
+    background-size: contain;
     background-position: -35px 0;
   }
 
@@ -67,10 +62,10 @@
     font-weight: 400;
 
     @include media-breakpoint-up(lg) {
-      margin-top: 0; //340px'
-      margin-bottom: 35px;
-      font-size: 45px;
-      line-height: 45px;
+      margin-top: 0;
+      margin-bottom: 2.6vw;
+      font-size: 2.8vw;
+      line-height: 3.5vw;
     }
 
     br {
@@ -88,9 +83,9 @@
     font-size: 5vw;
 
     @include media-breakpoint-up(lg) {
-      margin-top: 50px;
-      margin-bottom: 30px;
-      font-size: 21px;
+      margin-top: 3.5vw;
+      margin-bottom: 2.3vw;
+      font-size: 1.4vw;
     }
   }
 
@@ -104,9 +99,9 @@
     cursor: pointer;
 
     @include media-breakpoint-up(lg) {
-      padding: 40px 70px;
-      font-size: 55px;
-      border-radius: 20px;
+      padding: 1.8vw 3.5vw 2vw;
+      font-size: 3.7vw;
+      // border-radius: 20px;
     }
 
     &:hover {

@@ -1474,6 +1474,9 @@ template {
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px; }
+  @media (min-width: 992px) {
+    .container, .page-header-inner, .page-promo-inner, .page-main-inner, .page-footer-inner {
+      max-width: 61vw; } }
 
 .page__inner {
   height: 1000px;
@@ -1506,6 +1509,11 @@ template {
     height: 24px;
     width: 180px;
     display: inline-block; }
+  @media (min-width: 1600px) {
+    .select--form {
+      height: 1.9vw;
+      font-size: 0.75vw;
+      line-height: 1.2vw; } }
 
 .page-promo-inner {
   display: -ms-flexbox;
@@ -1552,12 +1560,15 @@ template {
 
 .form {
   margin-top: 1.2vw;
-  margin-left: 5vw;
+  margin-left: 3vw;
   padding: 1.7vw;
   background-color: #ffffff;
   border-top: 3px solid #ffdd00;
   border-radius: 0.7vw;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); }
+  @media (min-width: 1600px) {
+    .form {
+      border-top-width: 0.2vw; } }
   .form-main {
     padding-right: 0.6vw;
     padding-left: 0.6vw;
@@ -1565,9 +1576,14 @@ template {
     border-bottom: 1px solid #ccc; }
   .form-title {
     margin-top: 0;
+    margin-bottom: 18px;
     font-size: 21px;
     font-weight: 300;
     text-transform: uppercase; }
+    @media (min-width: 1600px) {
+      .form-title {
+        margin-bottom: 1vw;
+        font-size: 1.15vw; } }
   .form-btn {
     margin-top: 10px;
     width: 100%;
@@ -1577,25 +1593,43 @@ template {
     border: none;
     border-radius: 5px;
     cursor: pointer; }
+    @media (min-width: 1600px) {
+      .form-btn {
+        margin-top: 0.55vw;
+        padding: 0.8vw 0.45vw;
+        border-radius: 0.3vw; } }
     .form-btn:hover {
       background-color: #ffe433; }
   .form-footer {
     padding-top: 17px;
     text-align: center; }
+    @media (min-width: 1600px) {
+      .form-footer {
+        padding-top: 1vw; } }
   .form-label {
     margin-bottom: 1vw;
     display: block;
     font-size: 17px;
     color: #0088CC;
     text-transform: uppercase; }
+    @media (min-width: 1600px) {
+      .form-label {
+        font-size: 0.95vw; } }
   .form-cost {
     font-size: 28px;
     color: #0088CC; }
+    @media (min-width: 1600px) {
+      .form-cost {
+        font-size: 1.5vw; } }
   .form label {
     display: block;
     font-size: 14px;
     line-height: 22px;
     color: #555555; }
+    @media (min-width: 1600px) {
+      .form label {
+        font-size: 0.75vw;
+        line-height: 1.2vw; } }
 
 .page-main {
   padding-top: 59vw;

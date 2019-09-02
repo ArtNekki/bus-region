@@ -1,11 +1,15 @@
 .form {
   margin-top: 1.2vw;
-  margin-left: 5vw;
+  margin-left: 3vw;
   padding: 1.7vw;
   background-color: $white;
   border-top: 3px solid $yellow;
   border-radius: 0.7vw;
   box-shadow: 0 0 30px rgba($black, 0.2);
+
+  @include media-breakpoint-up(xxl) {
+    border-top-width: 0.2vw;
+  }
 
   &-main {
     padding-right: 0.6vw;
@@ -16,9 +20,15 @@
 
   &-title {
     margin-top: 0;
+    margin-bottom: 18px;
     font-size: 21px;
     font-weight: 300;
     text-transform: uppercase;
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 1vw;
+      font-size: 1.15vw;
+    }
   }
 
   &-btn {
@@ -31,6 +41,12 @@
     border-radius: 5px;
     cursor: pointer;
 
+    @include media-breakpoint-up(xxl) {
+      margin-top: 0.55vw;
+      padding: 0.8vw 0.45vw;
+      border-radius: 0.3vw;
+    }
+
     &:hover {
       background-color: lighten($yellow, 10%);
     }
@@ -39,6 +55,10 @@
   &-footer {
     padding-top: 17px;
     text-align: center;
+
+    @include media-breakpoint-up(xxl) {
+      padding-top: 1vw;
+    }
   }
 
   &-label {
@@ -47,11 +67,19 @@
     font-size: 17px;
     color: $blue;
     text-transform: uppercase;
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 0.95vw;
+    }
   }
 
   &-cost {
     font-size: 28px;
     color: $blue;
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 1.5vw;
+    }
   }
 
   label {
@@ -60,5 +88,10 @@
     font-size: 14px;
     line-height: 22px;
     color: $gray-dark;
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 0.75vw;
+      line-height: 1.2vw;
+    }
   }
 }

@@ -16,6 +16,11 @@ $gray-dark: #555555;
 $yellow: #ffdd00;
 $blue: #0088CC;
 
+//fonts
+// Fonts Family
+$base-font-family: "Kelson", -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+$secondary-font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+
 //grid
 $grid-breakpoints: (
   xs: 0,
@@ -28,5 +33,5 @@ $grid-breakpoints: (
 
 
 body {
-  font-family: 'Kelson';
+  font-family: $base-font-family;
 }

@@ -17,6 +17,18 @@
   font-weight: 700;
   font-style: normal; }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/opensans-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-bold-webfont.woff2") format("woff2"), url("../fonts/opensans-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
 html {
   box-sizing: border-box; }
 
@@ -26,7 +38,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-family: 'Kelson'; }
+  font-family: "Kelson", -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -1501,6 +1513,7 @@ template {
   display: block;
   height: 34px;
   width: 100%;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   line-height: 22px;
   color: #555555; }
@@ -1615,6 +1628,7 @@ template {
   .form-label {
     margin-bottom: 1vw;
     display: block;
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
     font-size: 17px;
     color: #0088CC;
     text-transform: uppercase; }
@@ -1622,6 +1636,7 @@ template {
       .form-label {
         font-size: 0.95vw; } }
   .form-cost {
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
     font-size: 28px;
     color: #0088CC; }
     @media (min-width: 1600px) {
@@ -1629,6 +1644,7 @@ template {
         font-size: 1.5vw; } }
   .form label {
     display: block;
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
     font-size: 14px;
     line-height: 22px;
     color: #555555; }

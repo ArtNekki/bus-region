@@ -69,6 +69,7 @@
   &-label {
     margin-bottom: 1vw;
     display: block;
+    font-family: $secondary-font-family;
     font-size: 17px;
     color: $blue;
     text-transform: uppercase;
@@ -79,6 +80,7 @@
   }
 
   &-cost {
+    font-family: $secondary-font-family;
     font-size: 28px;
     color: $blue;
 
@@ -89,7 +91,7 @@
 
   label {
     display: block;
-    // font-family: "Open Sans";
+    font-family: $secondary-font-family;
     font-size: 14px;
     line-height: 22px;
     color: $gray-dark;

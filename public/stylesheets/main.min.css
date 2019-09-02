@@ -1511,14 +1511,27 @@ template {
 
 .select {
   display: block;
+  padding-right: 8px;
+  padding-left: 8px;
   height: 34px;
   width: 100%;
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   line-height: 22px;
-  color: #555555; }
+  color: #555555;
+  background-color: #ffffff;
+  background-image: url("../images/svg/select-arrow.svg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: calc(100% + 1px) 50%;
+  border: 1px solid #cccccc;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
   .select--header {
     margin-top: -20px;
+    padding-right: 5px;
+    padding-left: 5px;
     height: 24px;
     width: 180px;
     display: inline-block; }

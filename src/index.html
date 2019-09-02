@@ -22,7 +22,7 @@
   <section class="page-promo">
     <div class="page-promo-inner">
       <h1 class="page-promo-title bounceInLeft animated">Сверхсрочная<br />доставка от<br /><span>двух</span> часов</h1>
-      <div class="form">
+      <div id="calc-form" class="form">
         <form action="" class="form-main">
           <h3 class="form-title">Рассчитайте стоимость вашей доставки</h3>
           <div class="form-group">
@@ -48,7 +48,7 @@
           <i></i>
         </span>
         <h1 class="page-main-title">Доставляем по республике <br /> и за её пределы от <b>250</b> р</h1>
-        <button class="page-main-button pulse delay-2s animated duration-4s">Рассчитать доставку</button>
+        <a href="#calc-form" data-scroll="data-scroll" class="page-main-button pulse delay-2s animated duration-4s">Рассчитать доставку</a>
         <p class="page-main-text">Узнайте подробнее в одном из наших офисов</p>
         <div class="locations">
           <a href="#" class="location bounceInLeft animated">
@@ -102,5 +102,7 @@
       </div>
     </div>
   </footer>
+  <script src="javascripts/jquery.min.js"></script>
+  <script src="javascripts/app.min.js"></script>
 </body>
 </html>

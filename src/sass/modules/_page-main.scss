@@ -1,4 +1,5 @@
 .page-main {
+  position: relative;
   padding-top: 59vw;
   padding-bottom: 40vw;
   // max-width: 1560px;
@@ -8,7 +9,8 @@
   background-repeat: no-repeat;
 
   @include media-breakpoint-up(lg) {
-    padding-top: 31.6vw;
+    margin-top: 5vw;
+    padding-top: 25.6vw;
     // padding-bottom: 500px;
     background-image: url("../images/content/bg.svg");
     background-size: contain;
@@ -23,11 +25,13 @@
     display: none;
 
     @include media-breakpoint-up(lg) {
-      position: relative;
-      transform: translate3d(-1000px, 200px, 0);
+      position: absolute;
+      top: -5.5vw;
+      left: 14.1vw;
+      transform: translate3d(-1000px, 10vw, 0);
       display: block;
-      width: 148px;
-      height: 74px;
+      width: 9vw;
+      height: 5vw;
       background-image: url('../images/svg/bus.svg');
       background-repeat: no-repeat;
 
@@ -35,26 +39,25 @@
       animation-duration: 3s;
       animation-fill-mode: forwards;
     }
-  }
 
-  &-label {
-    display: none;
+    i {
 
-    @include media-breakpoint-up(lg) {
-      position: relative;
-      transform: translate3d(225px, -38px, 0);
-      display: block;
-      width: 348px;
-      height: 74px;
-      opacity: 0;
-      visibility: hidden;
-      background-image: url('../images/svg/bus-label.svg');
-      background-repeat: no-repeat;
+      @include media-breakpoint-up(lg) {
+        position: relative;
+        transform: translate3d(9.8vw, -1vw, 0);
+        display: block;
+        width: 22.4vw;
+        height: 4vw;
+        opacity: 0;
+        visibility: hidden;
+        background-image: url('../images/svg/bus-label.svg');
+        background-repeat: no-repeat;
 
-      animation: fade-in;
-      animation-duration: 0.5s;
-      animation-delay: 3s;
-      animation-fill-mode: forwards;
+        animation: fade-in;
+        animation-duration: 0.5s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+      }
     }
   }
 
@@ -116,7 +119,7 @@
 
 @keyframes move-bus {
   100% {
-    transform: translate3d(68px, 51px, 0);
+    transform: translate3d(3.6vw, 2.9vw, 0);
   }
 }
 

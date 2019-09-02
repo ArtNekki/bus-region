@@ -30,6 +30,7 @@
     margin: 0;
     display: inline-block;
     font-size: 0.8vw;
+    order: 3;
   }
 
   &::before {
@@ -52,6 +53,10 @@
   }
 
   &--bus {
+    @include media-breakpoint-up(lg) {
+      order: 1;
+    }
+
     &::before {
       width: 16vw;
       height: 8vw;
@@ -71,6 +76,10 @@
   }
 
   &--time {
+    @include media-breakpoint-up(lg) {
+      order: 2;
+    }
+
     &::before {
       width: 13vw;
       height: 13vw;

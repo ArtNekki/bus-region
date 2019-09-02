@@ -1,3 +1,6 @@
+$location-border-radius-mobile: 2vw;
+$location-border-radius-desktop: 0.6vw;
+
 .locations {
 
   @include media-breakpoint-up(lg) {
@@ -12,7 +15,7 @@
   margin-bottom: 5vw;
   padding-top: 3.5vw;
   padding-bottom: 3.5vw;
-  border-radius: 2vw;
+  border-radius: $location-border-radius-mobile;
   width: 55vw;
   // margin-bottom: 30px;
   background-color: $gray-dark;
@@ -33,7 +36,7 @@
     padding-left: 3vw;
     width: auto;
     // flex-grow: 1;
-    border-radius: 10px;
+    border-radius: $location-border-radius-desktop;
   }
 
   &:nth-child(2) {
@@ -44,7 +47,33 @@
   }
 
   &--south {
-    margin-bottom: 0;
+    position: relative;
+    cursor: auto;
+
+    &::before {
+      content: attr(data-soon);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 4vw;
+      color: $white;
+      background-color: $yellow;
+      border-radius: $location-border-radius-mobile;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 2vw;
+        border-radius: $location-border-radius-desktop;
+      }
+    }
+
+    &:hover:before {
+      display: flex;
+    }
   }
 
   &:hover {

@@ -1,3 +1,11 @@
+.details {
+  @include media-breakpoint-up(lg) {
+    margin-top: 4vw;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .detail {
   position: relative;
   margin-right: auto;
@@ -13,7 +21,7 @@
   @include media-breakpoint-up(lg) {
     margin: 0;
     display: inline-block;
-    font-size: 14px;
+    font-size: 0.8vw;
   }
 
   &::before {
@@ -42,14 +50,14 @@
       background-image: url("../images/svg/bus-sm.svg");
 
       @include media-breakpoint-up(lg) {
-        width: 80px;
-        height: 40px;
+        width: 6vw;
+        height: 2.25vw;
       }
     }
 
     span {
       @include media-breakpoint-up(lg) {
-        margin-left: 90px;
+        margin-left: 5.3vw;
       }
     }
   }
@@ -61,14 +69,14 @@
       background-image: url("../images/svg/time.svg");
 
       @include media-breakpoint-up(lg) {
-        width: 56px;
-        height: 53px;
+        width: 3vw;
+        height: 3vw;
       }
     }
 
     span {
       @include media-breakpoint-up(lg) {
-        margin-left: 65px;
+        margin-left: 3.5vw;
       }
     }
   }
@@ -81,14 +89,14 @@
       background-image: url("../images/svg/mark.svg");
 
       @include media-breakpoint-up(lg) {
-        width: 85px;
-        height: 60px;
+        width: 5vw;
+        height: 3.3vw;
       }
     }
 
     span {
       @include media-breakpoint-up(lg) {
-        margin-left: 70px;
+        margin-left: 3.8vw;
       }
     }
   }
@@ -100,14 +108,14 @@
       background-image: url("../images/svg/phone.svg");
 
       @include media-breakpoint-up(lg) {
-        width: 48px;
-        height: 60px;
+        width: 2.6vw;
+        height: 3.3vw;
       }
     }
 
     span {
       @include media-breakpoint-up(lg) {
-        margin-left: 50px;
+        margin-left: 2.7vw;
       }
     }
   }

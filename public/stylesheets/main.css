@@ -2381,6 +2381,14 @@ template {
       .location small {
         font-size: 1.2vw; } }
 
+@media (min-width: 992px) {
+  .details {
+    margin-top: 4vw;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; } }
+
 .detail {
   position: relative;
   margin-right: auto;
@@ -2398,7 +2406,7 @@ template {
     .detail {
       margin: 0;
       display: inline-block;
-      font-size: 14px; } }
+      font-size: 0.8vw; } }
   .detail::before {
     content: "";
     margin-right: 2vw;
@@ -2419,22 +2427,22 @@ template {
     background-image: url("../images/svg/bus-sm.svg"); }
     @media (min-width: 992px) {
       .detail--bus::before {
-        width: 80px;
-        height: 40px; } }
+        width: 6vw;
+        height: 2.25vw; } }
   @media (min-width: 992px) {
     .detail--bus span {
-      margin-left: 90px; } }
+      margin-left: 5.3vw; } }
   .detail--time::before {
     width: 13vw;
     height: 13vw;
     background-image: url("../images/svg/time.svg"); }
     @media (min-width: 992px) {
       .detail--time::before {
-        width: 56px;
-        height: 53px; } }
+        width: 3vw;
+        height: 3vw; } }
   @media (min-width: 992px) {
     .detail--time span {
-      margin-left: 65px; } }
+      margin-left: 3.5vw; } }
   .detail--location::before {
     left: -25px;
     width: 18vw;
@@ -2442,22 +2450,22 @@ template {
     background-image: url("../images/svg/mark.svg"); }
     @media (min-width: 992px) {
       .detail--location::before {
-        width: 85px;
-        height: 60px; } }
+        width: 5vw;
+        height: 3.3vw; } }
   @media (min-width: 992px) {
     .detail--location span {
-      margin-left: 70px; } }
+      margin-left: 3.8vw; } }
   .detail--sms::before {
     width: 10vw;
     height: 11vw;
     background-image: url("../images/svg/phone.svg"); }
     @media (min-width: 992px) {
       .detail--sms::before {
-        width: 48px;
-        height: 60px; } }
+        width: 2.6vw;
+        height: 3.3vw; } }
   @media (min-width: 992px) {
     .detail--sms span {
-      margin-left: 50px; } }
+      margin-left: 2.7vw; } }
 
 .page-footer {
   color: #ffffff;

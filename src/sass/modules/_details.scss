@@ -10,9 +10,10 @@
   font-size: 3vw;
   text-align: left;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     margin: 0;
     display: inline-block;
+    font-size: 14px;
   }
 
   &::before {
@@ -21,10 +22,11 @@
     display: inline-block;
     background-repeat: no-repeat;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        margin-right: 0;
       }
   }
 
@@ -38,10 +40,15 @@
       width: 16vw;
       height: 8vw;
       background-image: url("../images/svg/bus-sm.svg");
+
+      @include media-breakpoint-up(lg) {
+        width: 80px;
+        height: 40px;
+      }
     }
 
     span {
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         margin-left: 90px;
       }
     }
@@ -52,10 +59,15 @@
       width: 13vw;
       height: 13vw;
       background-image: url("../images/svg/time.svg");
+
+      @include media-breakpoint-up(lg) {
+        width: 56px;
+        height: 53px;
+      }
     }
 
     span {
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         margin-left: 65px;
       }
     }
@@ -67,10 +79,15 @@
       width: 18vw;
       height: 13vw;
       background-image: url("../images/svg/mark.svg");
+
+      @include media-breakpoint-up(lg) {
+        width: 85px;
+        height: 60px;
+      }
     }
 
     span {
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         margin-left: 70px;
       }
     }
@@ -81,10 +98,15 @@
       width: 10vw;
       height: 11vw;
       background-image: url("../images/svg/phone.svg");
+
+      @include media-breakpoint-up(lg) {
+        width: 48px;
+        height: 60px;
+      }
     }
 
     span {
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         margin-left: 50px;
       }
     }

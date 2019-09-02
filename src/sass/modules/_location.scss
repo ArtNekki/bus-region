@@ -7,19 +7,20 @@
   border-radius: 2vw;
   width: 55vw;
   // margin-bottom: 30px;
-  // padding-top: 37px;
-  // padding-bottom: 25px;
   background-color: $gray-dark;
   display: block;
-  // border-radius: 10px;
   color: $black;
   background-color: $white;
   text-decoration: none;
   box-shadow: 0 0 30px rgba($black, 0.2);
   cursor: pointer;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     margin-bottom: 0;
+    padding-top: 35px;
+    padding-bottom: 23px;
+    width: auto;
+    border-radius: 10px;
   }
 
   &--south {
@@ -39,7 +40,7 @@
     // line-height: 30px;
     text-transform: uppercase;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       font-size: 40px;
     }
   }
@@ -48,7 +49,7 @@
     font-size: 3vw;
     // font-size: 18px;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       font-size: 22px;
     }
   }

@@ -37,8 +37,12 @@
 //classes
 
 .u-margin-top-large {
-  margin-top: 10vw;
-  // margin-top: 70px;
+  margin-top: 50px;
+  margin-bottom: 110px;
+
+    // @include media-breakpoint-up(lg) {
+    //   margin-top: 70px;
+    // }
 }
 
 .u-padding-right-0 {

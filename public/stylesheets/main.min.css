@@ -39,23 +39,23 @@ body {
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
-.container {
+.container, .page-promo-inner {
   width: 100%;
   padding-right: 30px;
   padding-left: 30px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
-    .container {
+    .container, .page-promo-inner {
       max-width: 540px; } }
   @media (min-width: 768px) {
-    .container {
+    .container, .page-promo-inner {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container {
+    .container, .page-promo-inner {
       max-width: 960px; } }
   @media (min-width: 1200px) {
-    .container {
+    .container, .page-promo-inner {
       max-width: 1170px; } }
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
@@ -66,19 +66,19 @@ body {
   margin-left: auto; }
 
 @media (min-width: 576px) {
-  .container, .container-sm {
+  .container, .page-promo-inner, .container-sm {
     max-width: 540px; } }
 
 @media (min-width: 768px) {
-  .container, .container-sm, .container-md {
+  .container, .page-promo-inner, .container-sm, .container-md {
     max-width: 720px; } }
 
 @media (min-width: 992px) {
-  .container, .container-sm, .container-md, .container-lg {
+  .container, .page-promo-inner, .container-sm, .container-md, .container-lg {
     max-width: 960px; } }
 
 @media (min-width: 1200px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl {
+  .container, .page-promo-inner, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1170px; } }
 
 .row {
@@ -2119,6 +2119,14 @@ template {
     transition-duration: 1ms !important;
     animation-iteration-count: 1 !important; } }
 
+.container, .page-promo-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px; }
+
 .page__inner {
   height: 1000px;
   background-color: #f9f9f9;
@@ -2151,6 +2159,12 @@ template {
     width: 180px;
     display: inline-block; }
 
+.page-promo-inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
 .page-promo-title {
   font-size: 10vw;
   line-height: 11vw;
@@ -2158,6 +2172,8 @@ template {
   text-align: center; }
   @media (min-width: 992px) {
     .page-promo-title {
+      margin-top: 30px;
+      margin-bottom: 0;
       font-size: 76px;
       line-height: 82px;
       text-align: left; } }
@@ -2187,17 +2203,17 @@ template {
       display: block; } }
 
 .form {
-  margin-top: 20px;
-  margin-left: 80px;
-  padding: 31px;
+  margin-top: 1.2vw;
+  margin-left: 5vw;
+  padding: 1.7vw;
   background-color: #ffffff;
   border-top: 3px solid #ffdd00;
-  border-radius: 10px;
+  border-radius: 0.7vw;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); }
   .form-main {
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 8px;
+    padding-right: 0.6vw;
+    padding-left: 0.6vw;
+    padding-bottom: 0.5vw;
     border-bottom: 1px solid #ccc; }
   .form-title {
     margin-top: 0;
@@ -2208,7 +2224,7 @@ template {
     margin-top: 10px;
     width: 100%;
     padding: 15px 8px;
-    font-size: 36px;
+    font-size: 2vw;
     background-color: #ffdd00;
     border: none;
     border-radius: 5px;
@@ -2219,7 +2235,7 @@ template {
     padding-top: 17px;
     text-align: center; }
   .form-label {
-    margin-bottom: 19px;
+    margin-bottom: 1vw;
     display: block;
     font-size: 17px;
     color: #0088CC;

@@ -46,9 +46,16 @@
     font-weight: 300;
     text-transform: uppercase;
 
+    @include media-breakpoint-up(lg) {
+      font-size: 1.3vw;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 1.15vw;
+    }
+
     @include media-breakpoint-up(xxl) {
       margin-bottom: 1vw;
-      font-size: 1.15vw;
     }
   }
 

@@ -1664,10 +1664,15 @@ template {
     font-size: 21px;
     font-weight: 300;
     text-transform: uppercase; }
+    @media (min-width: 992px) {
+      .form-title {
+        font-size: 1.3vw; } }
     @media (min-width: 1600px) {
       .form-title {
-        margin-bottom: 1vw;
         font-size: 1.15vw; } }
+    @media (min-width: 1600px) {
+      .form-title {
+        margin-bottom: 1vw; } }
   .form-btn {
     margin-top: 10px;
     width: 100%;

@@ -46,6 +46,7 @@
     width: 100%;
     padding: 15px 8px;
     font-size: 2vw;
+    color: $black;
     background-color: $yellow;
     border: none;
     border-radius: 5px;
@@ -59,6 +60,20 @@
 
     &:hover {
       background-color: lighten($yellow, 10%);
+    }
+
+    &:disabled {
+      color: rgba($black, 0.2);
+      background-color: $gray;
+      cursor: not-allowed;
+    }
+  }
+
+  &-group {
+    margin-bottom: 6px;
+
+    &:not(:nth-of-type(1)) {
+      display: none;
     }
   }
 

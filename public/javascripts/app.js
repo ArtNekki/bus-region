@@ -22,6 +22,25 @@ $(document).ready(function() {
       }
     }
   });
+
+  $(document).on('change', '.select--form', function() {
+    var nextSelect = $(this).parent().next();
+
+    if(nextSelect.length) {
+      nextSelect.show();
+    }
+  });
+
+  $('#place-count').on('input', function() {
+    var isVal = $(this).val().length;
+    var btn = $(this).parents('.form-main').find('[type="submit"]');
+
+    if(isVal) {
+      btn.removeAttr('disabled');
+    } else {
+      btn.attr('disabled', true);
+    }
+  })
 });
 
 /*!

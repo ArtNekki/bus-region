@@ -32,7 +32,7 @@
       display: block;
       width: 9vw;
       height: 5vw;
-      background-image: url('../images/svg/bus.svg');
+      background-image: url("../images/svg/bus.svg");
       background-repeat: no-repeat;
 
       animation-name: move-bus;
@@ -50,7 +50,7 @@
         height: 4vw;
         opacity: 0;
         visibility: hidden;
-        background-image: url('../images/svg/bus-label.svg');
+        background-image: url("../images/svg/bus-label.svg");
         background-repeat: no-repeat;
 
         animation: fade-in;

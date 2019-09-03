@@ -2025,13 +2025,71 @@ template {
       margin-left: 2.7vw; } }
 
 .page-footer {
+  padding-top: 37px;
+  padding-bottom: 33px;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   color: #ffffff;
   background-color: #000000; }
+  @media (min-width: 992px) {
+    .page-footer {
+      padding-top: 2.6vw;
+      padding-bottom: 2.5vw; } }
   .page-footer-inner {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    @media (min-width: 992px) {
+      .page-footer-inner {
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+  .page-footer .page-footer-col {
+    text-align: center;
+    -ms-flex-negative: 2;
+        flex-shrink: 2; }
+    .page-footer .page-footer-col:not(:last-child) {
+      margin-bottom: 25px; }
+      @media (min-width: 992px) {
+        .page-footer .page-footer-col:not(:last-child) {
+          margin-bottom: 0;
+          margin-right: 1vw; } }
+  .page-footer-contact {
+    display: block;
+    font-size: 12px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.8); }
+    .page-footer-contact::before {
+      content: ""; }
+    .page-footer-contact b {
+      color: rgba(255, 255, 255, 0.6); }
+    .page-footer-contact a {
+      color: #ffffff;
+      text-decoration: none; }
+      .page-footer-contact a:hover {
+        text-decoration: underline; }
+    @media (min-width: 992px) {
+      .page-footer-contact {
+        font-size: 0.93vw;
+        line-height: 1.2vw; } }
+    @media (min-width: 1200px) {
+      .page-footer-contact {
+        font-size: 0.9vw; } }
+    @media (min-width: 1200px) {
+      .page-footer-contact {
+        font-size: 0.75vw; } }
+    .page-footer-contact--address {
+      margin-bottom: 1vw; }
+      .page-footer-contact--address::before {
+        display: inline-block;
+        width: 1vw;
+        height: 1vw;
+        background-image: url("../images/svg/phone-alt.svg"); }
+    .page-footer-contact--email {
+      margin-bottom: 0.25vw; }
 
 .modal {
   position: relative;

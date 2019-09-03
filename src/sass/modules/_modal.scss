@@ -1,11 +1,15 @@
 .modal {
   position: relative;
-  margin: 20px;
+  margin: 15px;
   width: 100%;
   max-width: 600px;
   min-height: auto;
   display: none;
   transform: translate3d(-100vw, 0, 0);
+
+  @include media-breakpoint-up(md) {
+    margin: 25px;
+  }
 
   &-overlay {
     position: fixed;
@@ -24,7 +28,7 @@
   &-close {
     position: absolute;
     top: -65px;
-    right: -25px;
+    right: -7px;
     font-size: 65px;
     color: $blue;
     cursor: pointer;
@@ -44,6 +48,10 @@ input#calc-modal:checked ~ .modal-overlay {
   animation-name: fade-in;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
 }
 
 input#calc-modal:checked ~ .modal-overlay .modal {

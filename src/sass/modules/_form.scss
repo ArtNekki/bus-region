@@ -1,7 +1,7 @@
 .form {
   margin-top: 1.2vw;
   margin-left: 3vw;
-  padding: 1.7vw;
+  padding: 15px;
   display: none;
   background-color: $white;
   border-top: 3px solid $yellow;
@@ -9,6 +9,11 @@
   box-shadow: 0 0 30px rgba($black, 0.2);
 
   @include media-breakpoint-up(lg) {
+    padding: 25px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 1.7vw;
     display: block;
   }
 
@@ -22,10 +27,16 @@
   }
 
   &-main {
-    padding-right: 0.6vw;
-    padding-left: 0.6vw;
-    padding-bottom: 0.5vw;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #ccc;
+
+    @include media-breakpoint-up(xxl) {
+      padding-right: 0.6vw;
+      padding-left: 0.6vw;
+      padding-bottom: 0.5vw;
+    }
   }
 
   &-title {
@@ -45,12 +56,16 @@
     margin-top: 10px;
     width: 100%;
     padding: 15px 8px;
-    font-size: 2vw;
+    font-size: 17px;
     color: $black;
     background-color: $yellow;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2vw;
+    }
 
     @include media-breakpoint-up(xxl) {
       margin-top: 0.55vw;

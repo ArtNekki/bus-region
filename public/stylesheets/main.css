@@ -1629,7 +1629,7 @@ template {
 .form {
   margin-top: 1.2vw;
   margin-left: 3vw;
-  padding: 1.7vw;
+  padding: 15px;
   display: none;
   background-color: #ffffff;
   border-top: 3px solid #ffdd00;
@@ -1637,6 +1637,10 @@ template {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); }
   @media (min-width: 992px) {
     .form {
+      padding: 25px; } }
+  @media (min-width: 992px) {
+    .form {
+      padding: 1.7vw;
       display: block; } }
   @media (min-width: 1600px) {
     .form {
@@ -1645,10 +1649,15 @@ template {
     margin: 0;
     display: block; }
   .form-main {
-    padding-right: 0.6vw;
-    padding-left: 0.6vw;
-    padding-bottom: 0.5vw;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #ccc; }
+    @media (min-width: 1600px) {
+      .form-main {
+        padding-right: 0.6vw;
+        padding-left: 0.6vw;
+        padding-bottom: 0.5vw; } }
   .form-title {
     margin-top: 0;
     margin-bottom: 18px;
@@ -1663,12 +1672,15 @@ template {
     margin-top: 10px;
     width: 100%;
     padding: 15px 8px;
-    font-size: 2vw;
+    font-size: 17px;
     color: #000000;
     background-color: #ffdd00;
     border: none;
     border-radius: 5px;
     cursor: pointer; }
+    @media (min-width: 992px) {
+      .form-btn {
+        font-size: 2vw; } }
     @media (min-width: 1600px) {
       .form-btn {
         margin-top: 0.55vw;
@@ -2015,12 +2027,15 @@ template {
 
 .modal {
   position: relative;
-  margin: 20px;
+  margin: 15px;
   width: 100%;
   max-width: 600px;
   min-height: auto;
   display: none;
   transform: translate3d(-100vw, 0, 0); }
+  @media (min-width: 768px) {
+    .modal {
+      margin: 25px; } }
   .modal-overlay {
     position: fixed;
     top: 0;
@@ -2038,7 +2053,7 @@ template {
   .modal-close {
     position: absolute;
     top: -65px;
-    right: -25px;
+    right: -7px;
     font-size: 65px;
     color: #0088CC;
     cursor: pointer; }
@@ -2054,6 +2069,9 @@ input#calc-modal:checked ~ .modal-overlay {
   animation-name: fade-in;
   animation-duration: 0.3s;
   animation-fill-mode: forwards; }
+  @media (min-width: 992px) {
+    input#calc-modal:checked ~ .modal-overlay {
+      display: none; } }
 
 input#calc-modal:checked ~ .modal-overlay .modal {
   display: block;

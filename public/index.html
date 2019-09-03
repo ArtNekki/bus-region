@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
   <title>New site</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="stylesheets/main.css">
 </head>
 <body class="page__inner">
@@ -71,7 +71,7 @@
         </span>
         <h1 class="page-main-title">Доставляем по республике <br /> и за её пределы от <b>250</b> р</h1>
         <a href="#calc-form" data-scroll="data-scroll" class="page-main-button page-main-button--desktop pulse delay-2s animated duration-4s">Рассчитать доставку</a>
-        <label for="calc-modal" class="page-main-button page-main-button--mobile pulse delay-2s animated duration-4s">Рассчитать доставку</label>
+        <button type="button" data-open-modal class="page-main-button page-main-button--mobile pulse delay-2s animated duration-4s">Рассчитать доставку</button>
         <p class="page-main-text">Узнайте подробнее в одном <br /> из наших офисов</p>
         <div class="locations">
           <a href="#" class="location bounceInLeft animated">
@@ -132,8 +132,7 @@
       </div>
     </div>
   </footer>
-  <input type="checkbox" id="calc-modal">
-  <label for="calc-modal" class="modal-overlay">
+  <div class="modal-overlay" data-close-modal="true">
     <div class="modal">
       <div id="calc-form" class="form form--modal">
         <form action="" class="form-main">
@@ -173,9 +172,9 @@
           <b class="form-cost">0</b>
         </div>
       </div>
-      <label for="calc-modal" class="modal-close">&times;</label>
+      <button class="modal-close" data-close-modal="true">&times;</button>
     </div>
-  </label>
+  </div>
   <script src="javascripts/jquery.min.js"></script>
   <script src="javascripts/app.min.js"></script>
 </body>

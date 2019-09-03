@@ -29,6 +29,10 @@
     position: absolute;
     top: -65px;
     right: -7px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
     font-size: 65px;
     color: $blue;
     cursor: pointer;
@@ -39,11 +43,7 @@
   }
 }
 
-input#calc-modal {
-  display: none;
-}
-
-input#calc-modal:checked ~ .modal-overlay {
+.page--modal-opened .modal-overlay {
   display: flex;
   animation-name: fade-in;
   animation-duration: 0.3s;
@@ -54,7 +54,7 @@ input#calc-modal:checked ~ .modal-overlay {
   }
 }
 
-input#calc-modal:checked ~ .modal-overlay .modal {
+.page--modal-opened .modal {
   display: block;
   animation-name: bounce-left;
   animation-delay: 0.5s;

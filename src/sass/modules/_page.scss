@@ -1,6 +1,12 @@
 .page {
 
+  &--modal-opened {
+      overflow: hidden;
 
+      body {
+        position: fixed;
+      }
+    }
 }
 
 .page__inner {

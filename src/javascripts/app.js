@@ -40,5 +40,16 @@ $(document).ready(function() {
     } else {
       btn.attr('disabled', true);
     }
-  })
+  });
+
+  $('[data-open-modal]').on('click', function() {
+    $('html').addClass('page--modal-opened');
+  });
+
+  $(document).on('click', function(e) {
+
+    if($(e.target).attr('data-close-modal')) {
+      $('html').removeClass('page--modal-opened');
+    }
+  });
 });

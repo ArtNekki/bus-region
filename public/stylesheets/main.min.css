@@ -1503,6 +1503,11 @@ template {
     .container, .page-header-inner, .page-promo-inner, .page-main-inner, .page-footer-inner {
       max-width: 62vw; } }
 
+.page--modal-opened {
+  overflow: hidden; }
+  .page--modal-opened body {
+    position: fixed; }
+
 .page__inner {
   height: 1000px;
   background-color: #f9f9f9;
@@ -1681,7 +1686,7 @@ template {
   .form-title {
     margin-top: 0;
     margin-bottom: 18px;
-    font-size: 21px;
+    font-size: 16px;
     font-weight: 300;
     text-transform: uppercase; }
     @media (min-width: 992px) {
@@ -1747,7 +1752,7 @@ template {
   .form label {
     display: block;
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 22px;
     color: #555555; }
     @media (min-width: 1600px) {
@@ -2141,26 +2146,27 @@ template {
     position: absolute;
     top: -65px;
     right: -7px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
     font-size: 65px;
     color: #0088CC;
     cursor: pointer; }
     .modal-close:hover {
       color: rgba(0, 136, 204, 0.7); }
 
-input#calc-modal {
-  display: none; }
-
-input#calc-modal:checked ~ .modal-overlay {
+.page--modal-opened .modal-overlay {
   display: -ms-flexbox;
   display: flex;
   animation-name: fade-in;
   animation-duration: 0.3s;
   animation-fill-mode: forwards; }
   @media (min-width: 992px) {
-    input#calc-modal:checked ~ .modal-overlay {
+    .page--modal-opened .modal-overlay {
       display: none; } }
 
-input#calc-modal:checked ~ .modal-overlay .modal {
+.page--modal-opened .modal {
   display: block;
   animation-name: bounce-left;
   animation-delay: 0.5s;

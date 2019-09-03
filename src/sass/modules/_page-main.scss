@@ -62,10 +62,10 @@
   }
 
   &-title {
-    margin-top: 3vw;
-    margin-bottom: 3vw;
+    margin-top: 5vw;
+    margin-bottom: 7vw;
     font-size: 5vw;
-    line-height: 8vw;
+    line-height: 6vw;
     font-weight: 400;
 
     @include media-breakpoint-up(lg) {
@@ -85,7 +85,7 @@
   }
 
   &-text {
-    margin-top: 18vw;
+    margin-top: 22vw;
     margin-bottom: 5vw;
     font-size: 5vw;
 
@@ -93,6 +93,12 @@
       margin-top: 3.5vw;
       margin-bottom: 2.3vw;
       font-size: 1.4vw;
+    }
+
+    br {
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
     }
   }
 

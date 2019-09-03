@@ -1777,10 +1777,10 @@ template {
         animation-delay: 3s;
         animation-fill-mode: forwards; } }
   .page-main-title {
-    margin-top: 3vw;
-    margin-bottom: 3vw;
+    margin-top: 5vw;
+    margin-bottom: 7vw;
     font-size: 5vw;
-    line-height: 8vw;
+    line-height: 6vw;
     font-weight: 400; }
     @media (min-width: 992px) {
       .page-main-title {
@@ -1792,7 +1792,7 @@ template {
       .page-main-title br {
         display: block; } }
   .page-main-text {
-    margin-top: 18vw;
+    margin-top: 22vw;
     margin-bottom: 5vw;
     font-size: 5vw; }
     @media (min-width: 992px) {
@@ -1800,6 +1800,9 @@ template {
         margin-top: 3.5vw;
         margin-bottom: 2.3vw;
         font-size: 1.4vw; } }
+    @media (min-width: 992px) {
+      .page-main-text br {
+        display: none; } }
   .page-main-button {
     padding: 3vw 6vw;
     font-size: 6vw;

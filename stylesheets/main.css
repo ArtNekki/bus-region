@@ -2117,7 +2117,9 @@ template {
   margin: 15px;
   width: 100%;
   max-width: 600px;
-  min-height: auto; }
+  min-height: auto;
+  display: none;
+  transform: translate3d(-100vw, 0, 0); }
   @media (min-width: 768px) {
     .modal {
       margin: 25px; } }
@@ -2127,6 +2129,8 @@ template {
     right: 0;
     bottom: 0;
     left: 0;
+    display: none;
+    opacity: 0;
     -ms-flex-align: center;
         align-items: center;
     -ms-flex-pack: center;
@@ -2142,3 +2146,23 @@ template {
     cursor: pointer; }
     .modal-close:hover {
       color: rgba(0, 136, 204, 0.7); }
+
+input#calc-modal {
+  display: none; }
+
+input#calc-modal:checked ~ .modal-overlay {
+  display: -ms-flexbox;
+  display: flex;
+  animation-name: fade-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards; }
+  @media (min-width: 992px) {
+    input#calc-modal:checked ~ .modal-overlay {
+      display: none; } }
+
+input#calc-modal:checked ~ .modal-overlay .modal {
+  display: block;
+  animation-name: bounce-left;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }

@@ -99,20 +99,36 @@
   &-button {
     padding: 3vw 6vw;
     font-size: 6vw;
+    color: $black;
     background-color: $yellow;
     border: none;
     border-radius: 2vw;
     box-shadow: 0 0 30px rgba($black, 0.2);
+    text-decoration: none;
     cursor: pointer;
 
     @include media-breakpoint-up(lg) {
       padding: 1.8vw 3.5vw 2vw;
       font-size: 3.7vw;
-      // border-radius: 20px;
+      border-radius: 1vw;
     }
 
     &:hover {
       background-color: lighten($yellow, 10%);
+    }
+
+    &--desktop {
+      display: none;
+
+      @include media-breakpoint-up(lg) {
+        display: inline-block;
+      }
+    }
+
+    &--mobile {
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
     }
   }
 }

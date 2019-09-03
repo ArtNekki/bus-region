@@ -3,11 +3,23 @@
   padding-bottom: 15px;
   background-color: $white;
 
+  @include media-breakpoint-up(lg) {
+    padding-top: 1.7vw;
+    padding-bottom: 1vw;
+  }
+
   &-inner {
     @extend .container;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
+    height: 125px;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      height: auto;
+    }
   }
 }

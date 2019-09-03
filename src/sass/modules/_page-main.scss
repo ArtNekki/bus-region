@@ -1,7 +1,7 @@
 .page-main {
   position: relative;
   padding-top: 59vw;
-  padding-bottom: 40vw;
+  padding-bottom: 45vw;
   // max-width: 1560px;
   text-align: center;
   background-image: url("../images/content/bg-mobile.svg");
@@ -11,7 +11,7 @@
   @include media-breakpoint-up(lg) {
     margin-top: 29vw;
     padding-top: 25.6vw;
-    // padding-bottom: 500px;
+    padding-bottom: 40vw;
     background-image: url("../images/content/bg.svg");
     background-size: contain;
     background-position: -35px 0;

@@ -1514,13 +1514,33 @@ template {
   padding-top: 25px;
   padding-bottom: 15px;
   background-color: #ffffff; }
+  @media (min-width: 992px) {
+    .page-header {
+      padding-top: 1.7vw;
+      padding-bottom: 1vw; } }
   .page-header-inner {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
         align-items: center;
     -ms-flex-pack: justify;
-        justify-content: space-between; }
+        justify-content: space-between;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    height: 125px; }
+    @media (min-width: 768px) {
+      .page-header-inner {
+        -ms-flex-direction: row;
+            flex-direction: row;
+        height: auto; } }
+
+.logo img {
+  width: 135px;
+  height: 78px; }
+  @media (min-width: 992px) {
+    .logo img {
+      width: 8.8vw;
+      height: 5vw; } }
 
 .select {
   display: block;
@@ -1738,7 +1758,7 @@ template {
 .page-main {
   position: relative;
   padding-top: 59vw;
-  padding-bottom: 40vw;
+  padding-bottom: 45vw;
   text-align: center;
   background-image: url("../images/content/bg-mobile.svg");
   background-size: 100% auto;
@@ -1747,6 +1767,7 @@ template {
     .page-main {
       margin-top: 29vw;
       padding-top: 25.6vw;
+      padding-bottom: 40vw;
       background-image: url("../images/content/bg.svg");
       background-size: contain;
       background-position: -35px 0; } }
@@ -2073,7 +2094,7 @@ template {
         text-decoration: underline; }
     @media (min-width: 992px) {
       .page-footer-contact {
-        font-size: 0.93vw;
+        font-size: 0.92vw;
         line-height: 1.2vw; } }
     @media (min-width: 1200px) {
       .page-footer-contact {

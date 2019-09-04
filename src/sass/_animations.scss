@@ -16,3 +16,8 @@
      transform: translateX(0);
   }
 }
+
+.animated {
+  visibility: hidden;
+  animation-delay: 0.5s;
+}

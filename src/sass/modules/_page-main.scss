@@ -36,6 +36,7 @@
       background-repeat: no-repeat;
 
       animation-name: move-bus;
+      animation-delay: 0.5s;
       animation-duration: 3s;
       animation-fill-mode: forwards;
     }
@@ -55,7 +56,7 @@
 
         animation: fade-in;
         animation-duration: 0.5s;
-        animation-delay: 3s;
+        animation-delay: 3.5s;
         animation-fill-mode: forwards;
       }
     }

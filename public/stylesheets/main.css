@@ -53,6 +53,10 @@ body {
   100% {
     transform: translateX(0); } }
 
+.animated {
+  visibility: hidden;
+  animation-delay: 0.5s; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1790,6 +1794,7 @@ template {
         background-image: url("../images/svg/bus.svg");
         background-repeat: no-repeat;
         animation-name: move-bus;
+        animation-delay: 0.5s;
         animation-duration: 3s;
         animation-fill-mode: forwards; } }
     @media (min-width: 992px) {
@@ -1805,7 +1810,7 @@ template {
         background-repeat: no-repeat;
         animation: fade-in;
         animation-duration: 0.5s;
-        animation-delay: 3s;
+        animation-delay: 3.5s;
         animation-fill-mode: forwards; } }
   .page-main-title {
     margin-top: 5vw;

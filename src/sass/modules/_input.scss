@@ -10,6 +10,7 @@
   background-color: $white;
   border-radius: 5px;
   border: 1px solid $gray-medium;
+  appearance: none;
   outline: none;
 
   @include media-breakpoint-up(lg) {

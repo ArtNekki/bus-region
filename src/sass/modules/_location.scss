@@ -55,13 +55,14 @@ $location-border-radius-desktop: 0.6vw;
       right: 0;
       bottom: 0;
       left: 0;
-      display: none;
+      display: flex;
       align-items: center;
       justify-content: center;
       font-size: 4vw;
       color: $white;
       background-color: $yellow;
       border-radius: $location-border-radius-mobile;
+      opacity: 0;
 
       @include media-breakpoint-up(lg) {
         font-size: 2vw;
@@ -69,11 +70,15 @@ $location-border-radius-desktop: 0.6vw;
       }
 
       @include hover {
-        display: flex;
+        opacity: 1;
       }
 
       @include active {
-        display: flex;
+        opacity: 1;
+      }
+
+      @include focus {
+        opacity: 1;
       }
     }
   }

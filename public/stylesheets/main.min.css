@@ -42,6 +42,7 @@ body {
 
 @keyframes fade-in {
   100% {
+    visibility: visible;
     opacity: 1; } }
 
 @keyframes bounce-left {
@@ -53,14 +54,14 @@ body {
   100% {
     transform: translateX(0); } }
 
+@keyframes move-bus {
+  100% {
+    transform: translate3d(3.6vw, 2.9vw, 0); } }
+
 .animated {
   animation-delay: 0.5s; }
   .animated:not(.animated--visible) {
     visibility: hidden; }
-
-@keyframes move-bus {
-  100% {
-    transform: translate3d(3.6vw, 2.9vw, 0); } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -1842,7 +1843,7 @@ template {
         position: absolute;
         top: -5.5vw;
         left: 14.1vw;
-        transform: translate3d(-1000px, 10vw, 0);
+        transform: translate3d(-100vw, 18vw, 0);
         display: block;
         width: 9vw;
         height: 5vw;
@@ -1972,7 +1973,8 @@ template {
       right: 0;
       bottom: 0;
       left: 0;
-      display: none;
+      display: -ms-flexbox;
+      display: flex;
       -ms-flex-align: center;
           align-items: center;
       -ms-flex-pack: center;
@@ -1980,17 +1982,18 @@ template {
       font-size: 4vw;
       color: #ffffff;
       background-color: #ffdd00;
-      border-radius: 2vw; }
+      border-radius: 2vw;
+      opacity: 0; }
       @media (min-width: 992px) {
         .location--south::before {
           font-size: 2vw;
           border-radius: 0.6vw; } }
       html:not(.touch) .location--south:hover::before {
-        display: -ms-flexbox;
-        display: flex; }
+        opacity: 1; }
       .location--south:active:hover::before {
-        display: -ms-flexbox;
-        display: flex; }
+        opacity: 1; }
+      .location--south:focus:hover::before {
+        opacity: 1; }
   html:not(.touch) .location:hover {
     box-shadow: 0 0 30px rgba(255, 221, 0, 0.3); }
   .location:active, .location--active {

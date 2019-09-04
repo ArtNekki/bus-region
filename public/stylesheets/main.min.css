@@ -1853,7 +1853,7 @@ template {
     background-image: url("../images/svg/bus-mobile.svg");
     background-repeat: no-repeat;
     animation-name: move-mobile-bus;
-    animation-delay: 0.5s;
+    animation-delay: 1.5s;
     animation-duration: 3s;
     animation-fill-mode: forwards; }
     .page-main-mobile-bus i {
@@ -1868,7 +1868,7 @@ template {
       background-repeat: no-repeat;
       animation: fade-in;
       animation-duration: 0.5s;
-      animation-delay: 3s;
+      animation-delay: 4s;
       animation-fill-mode: forwards; }
   .page-main-bus {
     display: none; }

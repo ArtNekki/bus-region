@@ -2135,7 +2135,6 @@ template {
     bottom: 0;
     left: 0;
     display: none;
-    opacity: 0;
     -ms-flex-align: center;
         align-items: center;
     -ms-flex-pack: center;
@@ -2158,10 +2157,7 @@ template {
 
 .page--modal-opened .modal-overlay {
   display: -ms-flexbox;
-  display: flex;
-  animation-name: fade-in;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards; }
+  display: flex; }
   @media (min-width: 992px) {
     .page--modal-opened .modal-overlay {
       display: none; } }

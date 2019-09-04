@@ -54,6 +54,12 @@ body {
   100% {
     transform: translateX(0); } }
 
+@keyframes move-mobile-bus {
+  80% {
+    top: -2.7vw;
+    left: 40vw;
+    transform: rotate3d(0, 0, 1, 7deg); } }
+
 @keyframes move-bus {
   100% {
     transform: translate3d(3.6vw, 2.9vw, 0); } }
@@ -1836,6 +1842,34 @@ template {
       background-image: url("../images/content/bg.svg");
       background-size: contain;
       background-position: -35px 0; } }
+  .page-main-mobile-bus {
+    position: absolute;
+    top: 2.65vw;
+    left: 4.15vw;
+    transform: rotate3d(0, 0, 1, 0deg);
+    display: block;
+    width: 20.15vw;
+    height: 11vw;
+    background-image: url("../images/svg/bus-mobile.svg");
+    background-repeat: no-repeat;
+    animation-name: move-mobile-bus;
+    animation-delay: 0.5s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards; }
+    .page-main-mobile-bus i {
+      position: relative;
+      transform: translate3d(21.7vw, -2.7vw, 0);
+      display: block;
+      width: 62.9vw;
+      height: 10vw;
+      opacity: 0;
+      visibility: hidden;
+      background-image: url("../images/svg/bus-label-mobile.svg");
+      background-repeat: no-repeat;
+      animation: fade-in;
+      animation-duration: 0.5s;
+      animation-delay: 3s;
+      animation-fill-mode: forwards; }
   .page-main-bus {
     display: none; }
     @media (min-width: 992px) {

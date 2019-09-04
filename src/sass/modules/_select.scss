@@ -19,7 +19,17 @@
   outline: none;
 
   @include media-breakpoint-up(lg) {
+    font-size: 1.1vw;
+    line-height: 1.2vw;
     border-radius: 0.3vw;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 1vw;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 0.9vw;
   }
 
   @include hover {

@@ -24,8 +24,11 @@
   }
 
   .page-footer-col {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex-shrink: 2;
+    text-align: center;
 
     &:not(:last-child) {
       margin-bottom: 25px;
@@ -38,13 +41,25 @@
   }
 
   &-contact {
-    display: block;
+    position: relative;
+    display: inline-block;
     font-size: 12px;
     line-height: 24px;
     color: rgba($white, 0.8);
 
+    @include media-breakpoint-up(lg) {
+      font-size: 0.9vw;
+      line-height: 1.2vw;
+    }
+
     &::before {
       content: "";
+      display: inline-block;
+      background-repeat: no-repeat;
+
+      @include media-breakpoint-up(lg) {
+        left: -1vw;
+      }
     }
 
     b {
@@ -60,44 +75,92 @@
       }
     }
 
-    @include media-breakpoint-up(lg) {
-      font-size: 0.92vw;
-      line-height: 1.2vw;
-    }
-
-    @include media-breakpoint-up(xl) {
-      font-size: 0.9vw;
-    }
-
     @include media-breakpoint-up(xl) {
       font-size: 0.75vw;
     }
 
     &--address {
-      margin-bottom: 1vw;
+      margin-bottom: 30px;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 2vw;
+      }
 
       &::before {
-        display: inline-block;
-        width: 1vw;
-        height: 1vw;
-        background-image: url("../images/svg/phone-alt.svg");
+        width: 12px;
+        height: 15px;
+        background-image: url("../images/svg/map-marker.svg");
+
+        @include media-breakpoint-up(lg) {
+          width: 0.55vw;
+          height: 0.7vw;
+        }
+      }
+
+      br {
+        @include media-breakpoint-up(lg) {
+          display: none;
+        }
       }
     }
 
     &--inst {
+      color: $white;
+      font-weight: 700;
 
+      &::before {
+        width: 22px;
+        height: 21px;
+        background-image: url("../images/svg/inst.svg");
+
+        @include media-breakpoint-up(lg) {
+          width: 1.5vw;
+          height: 1.5vw;
+        }
+      }
     }
 
     &--phone {
+      &::before {
+        width: 12px;
+        height: 12px;
+        background-image: url("../images/svg/phone-alt.svg");
 
+        @include media-breakpoint-up(lg) {
+          width: 0.65vw;
+          height: 0.7vw;
+        }
+      }
     }
 
     &--email {
-      margin-bottom: 0.25vw;
+      margin-bottom: 0.4vw;
+
+      &::before {
+        width: 12px;
+        height: 9px;
+        background-image: url("../images/svg/email.svg");
+
+        @include media-breakpoint-up(lg) {
+          width: 0.85vw;
+          height: 0.6vw;
+        }
+      }
     }
 
     &--group {
+      &::before {
+        left: -20px;
+        width: 19px;
+        height: 12px;
+        background-image: url("../images/svg/users.svg");
 
+        @include media-breakpoint-up(lg) {
+          left: -1.2vw;
+          width: 1vw;
+          height: 0.7vw;
+        }
+      }
     }
   }
 }

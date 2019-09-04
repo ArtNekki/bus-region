@@ -1,0 +1,140 @@
+@mixin hover($parent: null, $touch: false) {
+  $selectors: "#{&}";
+  $isPseudo: str-index($selectors, "::before") or str-index($selectors, "::after");
+  $isChecked: str-index($selectors, "> input:checked");
+  $touchMod: null;
+
+  @if (not $touch) {
+    $touchMod: "html:not(.touch)";
+  }
+
+  @if ($parent and $isChecked) {
+    #{$touchMod} & {
+      $selector: &;
+      $splitSelector: str-split("#{$selector}", ">");
+      $selector: str-replace(nth($splitSelector, 1), $parent, "#{$parent}:hover");
+      $selector: "#{$selector} > #{nth($splitSelector, 2)}";
+
+      @at-root #{$selector} {
+         @content;
+      }
+    }
+  } @else if ($parent) {
+    #{$touchMod} #{$parent}:hover & {
+      @content;
+    }
+  } @else if (not $parent and $isPseudo) {
+    $mods: get-map-modified-pseudo-selectors("#{$selectors}");
+
+    #{$touchMod} &:hover {
+      $selector: &;
+
+      @each $mod in $mods {
+        $selector: selector-replace($selector, map-get($mod, "original"), map-get($mod, "new"));
+      }
+
+      @at-root #{$selector} {
+         @content;
+      }
+    }
+  } @else { //not $parent and not $isPseudo
+    #{$touchMod} &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin active($parent: null, $class: false) {
+  $selectors: "#{&}";
+  $isPseudo: str-index($selectors, "::before") or str-index($selectors, "::after");
+  $isChecked: str-index($selectors, "> input:checked");
+
+  @if ($parent and $isChecked) {
+    #{$touchMod} & {
+      $selector: &;
+      $splitSelector: str-split("#{$selector}", ">");
+      $selector: str-replace(nth($splitSelector, 1), $parent, "#{$parent}:hover");
+      $selector: "#{$selector} > #{nth($splitSelector, 2)}";
+
+      @at-root #{$selector} {
+        @debug $selector;
+
+         @content;
+      }
+    }
+  } @else if $parent {
+    #{$parent}:active &,
+    #{$parent}--active & {
+      @content;
+    }
+  } @else if (not $parent and $isPseudo) {
+    $mods: get-map-modified-pseudo-selectors("#{$selectors}");
+
+    &:active {
+      $selector: &;
+
+      @each $mod in $mods {
+        $selector: selector-replace($selector, map-get($mod, "original"), map-get($mod, "new"));
+      }
+
+      @at-root #{$selector} {
+         @content;
+      }
+    }
+
+  } @else { //not $parent and not $isPseudo
+    &:active,
+    &--active
+    {
+      @content;
+    }
+  }
+}
+
+@mixin focus($parent: null, $onlyTouch: false) {
+  $selectors: "#{&}";
+  $isPseudo: str-index($selectors, "::before") or str-index($selectors, "::after");
+  $isChecked: str-index($selectors, "> input:checked");
+  $touchMod: null;
+
+  @if ($onlyTouch) {
+    $touchMod: "html.touch";
+  }
+
+  @if ($parent and $isChecked) {
+    #{$touchMod} & {
+      $selector: &;
+      $splitSelector: str-split("#{$selector}", ">");
+      $selector: str-replace(nth($splitSelector, 1), $parent, "#{$parent}:hover");
+      $selector: "#{$selector} > #{nth($splitSelector, 2)}";
+
+      @at-root #{$selector} {
+        @debug $selector;
+
+         @content;
+      }
+    }
+  } @else if $parent {
+    #{$touchMod} #{$parent}:focus & {
+      @content;
+    }
+  } @else if (not $parent and $isPseudo) {
+    $mods: get-map-modified-pseudo-selectors("#{$selectors}");
+
+    #{$touchMod} &:focus {
+      $selector: &;
+
+      @each $mod in $mods {
+        $selector: selector-replace($selector, map-get($mod, "original"), map-get($mod, "new"));
+      }
+
+      @at-root #{$selector} {
+         @content;
+      }
+    }
+  } @else { //not $parent and not $isPseudo
+    #{$touchMod} &:focus {
+      @content;
+    }
+  }
+}

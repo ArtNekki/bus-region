@@ -3,9 +3,6 @@
   img {
     width: 135px;
     height: 78px;
-    // 
-    // width: 13.7vw;
-    // height: 8vw;
 
     @include media-breakpoint-up(lg) {
       width: 8.8vw;

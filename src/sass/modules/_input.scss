@@ -7,8 +7,22 @@
   font-size: 14px;
   line-height: 22px;
   color: $gray-dark;
-  border: 1px solid #cccccc;
   background-color: $white;
+  border-radius: 5px;
+  border: 1px solid $gray-medium;
+  outline: none;
+
+  @include media-breakpoint-up(lg) {
+    border-radius: 0.3vw;
+  }
+
+  @include hover {
+    border-color: darken($gray-medium, 10%);
+  }
+
+  @include focus {
+    border-color: darken($gray-medium, 10%);
+  }
 
   @include media-breakpoint-up(xxl) {
     height: 1.9vw;

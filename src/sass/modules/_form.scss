@@ -30,7 +30,7 @@
     padding-right: 10px;
     padding-left: 10px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $gray-medium;
 
     @include media-breakpoint-up(xxl) {
       padding-right: 0.6vw;
@@ -80,13 +80,17 @@
       border-radius: 0.3vw;
     }
 
-    &:hover {
+    @include hover {
+      background-color: lighten($yellow, 10%);
+    }
+
+    @include active {
       background-color: lighten($yellow, 10%);
     }
 
     &:disabled {
       color: rgba($black, 0.2);
-      background-color: $gray;
+      background-color: $gray !important;
       cursor: not-allowed;
     }
   }

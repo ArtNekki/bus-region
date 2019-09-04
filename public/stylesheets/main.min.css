@@ -54,8 +54,13 @@ body {
     transform: translateX(0); } }
 
 .animated {
-  visibility: hidden;
   animation-delay: 0.5s; }
+  .animated:not(.animated--visible) {
+    visibility: hidden; }
+
+@keyframes move-bus {
+  100% {
+    transform: translate3d(3.6vw, 2.9vw, 0); } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -1512,7 +1517,7 @@ template {
   .page--modal-opened body {
     position: fixed; }
 
-.page__inner {
+.page-inner {
   height: 1000px;
   background-color: #f9f9f9;
   background-repeat: no-repeat;
@@ -1566,10 +1571,19 @@ template {
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: calc(100% + 1px) 50%;
+  border-radius: 5px;
   border: 1px solid #cccccc;
   -webkit-appearance: none;
      -moz-appearance: none;
-          appearance: none; }
+          appearance: none;
+  outline: none; }
+  @media (min-width: 992px) {
+    .select {
+      border-radius: 0.3vw; } }
+  html:not(.touch) .select:hover {
+    border-color: #b3b3b3; }
+  .select:focus {
+    border-color: #b3b3b3; }
   .select--header {
     margin-top: -20px;
     padding-right: 5px;
@@ -1592,8 +1606,17 @@ template {
   font-size: 14px;
   line-height: 22px;
   color: #555555;
+  background-color: #ffffff;
+  border-radius: 5px;
   border: 1px solid #cccccc;
-  background-color: #ffffff; }
+  outline: none; }
+  @media (min-width: 992px) {
+    .input {
+      border-radius: 0.3vw; } }
+  html:not(.touch) .input:hover {
+    border-color: #b3b3b3; }
+  .input:focus {
+    border-color: #b3b3b3; }
   @media (min-width: 1600px) {
     .input {
       height: 1.9vw;
@@ -1681,7 +1704,7 @@ template {
     padding-right: 10px;
     padding-left: 10px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #ccc; }
+    border-bottom: 1px solid #cccccc; }
     @media (min-width: 1600px) {
       .form-main {
         padding-right: 0.6vw;
@@ -1720,11 +1743,13 @@ template {
         margin-top: 0.55vw;
         padding: 0.8vw 0.45vw;
         border-radius: 0.3vw; } }
-    .form-btn:hover {
+    html:not(.touch) .form-btn:hover {
+      background-color: #ffe433; }
+    .form-btn:active, .form-btn--active {
       background-color: #ffe433; }
     .form-btn:disabled {
       color: rgba(0, 0, 0, 0.2);
-      background-color: #f9f9f9;
+      background-color: #f9f9f9 !important;
       cursor: not-allowed; }
   .form-group {
     margin-bottom: 6px; }
@@ -1848,14 +1873,19 @@ template {
     border-radius: 2vw;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     text-decoration: none;
-    cursor: pointer; }
+    cursor: pointer;
+    outline: none; }
     @media (min-width: 992px) {
       .page-main-button {
         padding: 1.8vw 3.5vw 2vw;
         font-size: 3.7vw;
         border-radius: 1vw; } }
-    .page-main-button:hover {
-      background-color: #ffe433; }
+    html:not(.touch) .page-main-button:hover {
+      background-color: #ffe433;
+      box-shadow: 0 0 30px rgba(255, 221, 0, 0.4); }
+    .page-main-button:active, .page-main-button--active {
+      background-color: #ffe433;
+      box-shadow: 0 0 30px rgba(255, 221, 0, 0.4); }
     .page-main-button--desktop {
       display: none; }
       @media (min-width: 992px) {
@@ -1864,15 +1894,6 @@ template {
     @media (min-width: 992px) {
       .page-main-button--mobile {
         display: none; } }
-
-@keyframes move-bus {
-  100% {
-    transform: translate3d(3.6vw, 2.9vw, 0); } }
-
-@keyframes fade-in {
-  100% {
-    opacity: 1;
-    visibility: visible; } }
 
 @media (min-width: 992px) {
   .locations {
@@ -1934,10 +1955,15 @@ template {
         .location--south::before {
           font-size: 2vw;
           border-radius: 0.6vw; } }
-    .location--south:hover:before {
-      display: -ms-flexbox;
-      display: flex; }
-  .location:hover {
+      html:not(.touch) .location--south:hover::before {
+        display: -ms-flexbox;
+        display: flex; }
+      .location--south:active:hover::before {
+        display: -ms-flexbox;
+        display: flex; }
+  html:not(.touch) .location:hover {
+    box-shadow: 0 0 30px rgba(255, 221, 0, 0.3); }
+  .location:active, .location--active {
     box-shadow: 0 0 30px rgba(255, 221, 0, 0.3); }
   .location h3 {
     margin: 0;
@@ -2116,7 +2142,9 @@ template {
     .page-footer-contact a {
       color: #ffffff;
       text-decoration: none; }
-      .page-footer-contact a:hover {
+      html:not(.touch) .page-footer-contact a:hover {
+        text-decoration: underline; }
+      .page-footer-contact a:active, .page-footer-contact a--active {
         text-decoration: underline; }
     @media (min-width: 1200px) {
       .page-footer-contact {
@@ -2148,6 +2176,12 @@ template {
           .page-footer-contact--inst::before {
             width: 1.5vw;
             height: 1.5vw; } }
+      .page-footer-contact--inst a {
+        position: relative;
+        top: -3px; }
+        @media (min-width: 992px) {
+          .page-footer-contact--inst a {
+            top: -0.2vw; } }
     .page-footer-contact--phone::before {
       width: 12px;
       height: 12px;
@@ -2211,8 +2245,11 @@ template {
     border: none;
     font-size: 65px;
     color: #0088CC;
-    cursor: pointer; }
-    .modal-close:hover {
+    cursor: pointer;
+    outline: none; }
+    html:not(.touch) .modal-close:hover {
+      color: rgba(0, 136, 204, 0.7); }
+    .modal-close:active, .modal-close--active {
       color: rgba(0, 136, 204, 0.7); }
 
 .page--modal-opened .modal-overlay {

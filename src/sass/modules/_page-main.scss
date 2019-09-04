@@ -2,7 +2,6 @@
   position: relative;
   padding-top: 59vw;
   padding-bottom: 45vw;
-  // max-width: 1560px;
   text-align: center;
   background-image: url("../images/content/bg-mobile.svg");
   background-size: 100% auto;
@@ -77,7 +76,6 @@
     }
 
     br {
-      // display: none;
 
       @include media-breakpoint-up(lg) {
         display: block;
@@ -113,6 +111,7 @@
     box-shadow: 0 0 30px rgba($black, 0.2);
     text-decoration: none;
     cursor: pointer;
+    outline: none;
 
     @include media-breakpoint-up(lg) {
       padding: 1.8vw 3.5vw 2vw;
@@ -120,8 +119,14 @@
       border-radius: 1vw;
     }
 
-    &:hover {
+    @include hover {
       background-color: lighten($yellow, 10%);
+      box-shadow: 0 0 30px rgba($yellow, 0.4);
+    }
+
+    @include active {
+      background-color: lighten($yellow, 10%);
+      box-shadow: 0 0 30px rgba($yellow, 0.4);
     }
 
     &--desktop {
@@ -137,18 +142,5 @@
         display: none;
       }
     }
-  }
-}
-
-@keyframes move-bus {
-  100% {
-    transform: translate3d(3.6vw, 2.9vw, 0);
-  }
-}
-
-@keyframes fade-in {
-  100% {
-    opacity: 1;
-    visibility: visible;
   }
 }

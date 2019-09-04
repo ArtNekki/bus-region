@@ -70,7 +70,11 @@
       color: $white;
       text-decoration: none;
 
-      &:hover {
+      @include hover {
+        text-decoration: underline;
+      }
+
+      @include active {
         text-decoration: underline;
       }
     }
@@ -116,6 +120,15 @@
         @include media-breakpoint-up(lg) {
           width: 1.5vw;
           height: 1.5vw;
+        }
+      }
+
+      a {
+        position: relative;
+        top: -3px;
+
+        @include media-breakpoint-up(lg) {
+          top: -0.2vw;
         }
       }
     }

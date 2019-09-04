@@ -35,8 +35,13 @@
     font-size: 65px;
     color: $blue;
     cursor: pointer;
+    outline: none;
 
-    &:hover {
+    @include hover {
+      color: rgba($blue, 0.7);
+    }
+
+    @include active {
       color: rgba($blue, 0.7);
     }
   }

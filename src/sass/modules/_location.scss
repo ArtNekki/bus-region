@@ -24,6 +24,7 @@ $location-border-radius-desktop: 0.6vw;
   text-decoration: none;
   box-shadow: 0 0 30px rgba($black, 0.2);
   cursor: pointer;
+  outline: none;
 
   @include media-breakpoint-up(lg) {
     margin-right: unset;

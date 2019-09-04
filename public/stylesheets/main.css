@@ -1947,7 +1947,8 @@ template {
   background-color: #ffffff;
   text-decoration: none;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
   @media (min-width: 992px) {
     .location {
       margin-right: unset;

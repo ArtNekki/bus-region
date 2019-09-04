@@ -4,13 +4,26 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
   <title>New site</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="stylesheets/main.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    function cth(c){document.documentElement.classList.add(c)}
+    'ontouchstart' in window?cth('touch'):cth('no-touch');
+    if(typeof InstallTrigger!=='undefined')cth('firefox');
+    if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
+    if(/*@cc_on!@*/false||!!document.documentMode)cth('ie');
+    if(!(/*@cc_on!@*/false||!!document.documentMode)&&!!window.StyleMedia)cth('edge');
+    if(!!window.chrome&&(!!window.chrome.webstore||!!window.chrome.runtime))cth('chrome');
+    if(~navigator.appVersion.indexOf('Win'))cth('windows');
+    if(~navigator.appVersion.indexOf('Mac'))cth('osx');
+    if(~navigator.appVersion.indexOf('Linux'))cth('linux');
+  </script>
 </head>
-<body class="page__inner">
+<body class="page-inner">
   <header class="page-header">
     <div class="page-header-inner">
-      <a href="logo" class="logo">
+      <a href="/" class="logo">
         <img src="images/svg/logo.svg" alt="">
       </a>
       <select id="select-city" class="select select--header">
@@ -22,8 +35,8 @@
   <section class="page-promo">
     <div class="page-promo-content">
       <div class="page-promo-inner">
-        <h1 class="page-promo-title bounceInLeft animated">Сверхсрочная<br />доставка от<br /><span>двух</span> часов</h1>
-        <div id="calc-form" class="form">
+        <h1 class="page-promo-title animated" data-animation="bounceInLeft">Сверхсрочная<br />доставка от<br /><span>двух</span> часов</h1>
+        <div id="calc-form" class="form delay-1s animated--visible">
           <form action="" class="form-main">
             <h3 class="form-title">Рассчитайте стоимость вашей доставки</h3>
             <div class="form-group">
@@ -69,36 +82,36 @@
         <span class="page-main-bus">
           <i></i>
         </span>
-        <h1 class="page-main-title">Доставляем по республике <br /> и за её пределы от <b>250</b> р</h1>
-        <a href="#calc-form" data-scroll="data-scroll" class="page-main-button page-main-button--desktop pulse delay-2s animated duration-4s">Рассчитать доставку</a>
-        <label for="calc-modal" class="page-main-button page-main-button--mobile pulse delay-2s animated duration-4s">Рассчитать доставку</label>
+        <h1 class="page-main-title">Доставляем по республике <br /> и за её пределы от <b>250</b> ₽</h1>
+        <a href="#calc-form" data-scroll="data-scroll" class="page-main-button page-main-button--desktop animated duration-4s" data-animation="pulse">Рассчитать доставку</a>
+        <button type="button" data-open-modal class="page-main-button page-main-button--mobile animated duration-4s" data-animation="pulse">Рассчитать доставку</button>
         <p class="page-main-text">Узнайте подробнее в одном <br /> из наших офисов</p>
         <div class="locations">
-          <a href="#" class="location bounceInLeft animated">
+          <a href="#" class="location  animated" data-animation="bounceInLeft">
             <!-- bounceInLeft animated delay-4s -->
             <h3>Восточный</h3>
             <small>автовокзал</small>
           </a>
-          <a href="#" class="location bounceIn delay-1s animated">
+          <a href="#" class="location animated" data-animation="fadeInUp" data-animation-delay="1.5">
             <h3>Центральный</h3>
             <small>автовокзал</small>
           </a>
-          <a class="location location--south bounceInRight animated" data-soon="Открытие скоро">
+          <a class="location location--south animated" data-animation="bounceInRight" data-soon="Открытие скоро!">
             <h3>Южный</h3>
             <small>автовокзал</small>
           </a>
         </div>
         <div class="details">
-          <div class="detail detail--bus">
+          <div class="detail detail--bus animated" data-animation="bounceIn" data-animation-delay="2.5">
             <span><b>92</b> автобуса доставляют <br /> ваши посылки каждый день</span>
           </div>
-          <div class="detail detail--location">
+          <div class="detail detail--location animated" data-animation="bounceIn" data-animation-delay="3.1">
             <span><b>Доставка</b> в труднодоступные <br /> населённые пункты республики</span>
           </div>
-          <div class="detail detail--time">
+          <div class="detail detail--time animated" data-animation="bounceIn" data-animation-delay="2.8">
             <span>Доставка документов <br /> и грузов от <b>2</b> до <b>36</b> часов</span>
           </div>
-          <div class="detail detail--sms">
+          <div class="detail detail--sms animated" data-animation="bounceIn" data-animation-delay="3.3">
             <span><b>СМС</b> услуга уведомления <br /> об отправке</span>
           </div>
         </div>
@@ -109,10 +122,10 @@
       <div class="page-footer-col">
         <div class='page-footer-contact page-footer-contact--address'>
           <b>Адрес:</b>
-          690039, Приморский край, г.Владивосток, ул. Русская 2а, стр. 3
+          690039, <br /> Приморский край, г.Владивосток, <br /> ул. Русская 2а, стр. 3
         </div>
         <div class='page-footer-contact page-footer-contact--inst'>
-          bus_box
+          <a href="#">bus_box</a>
         </div>
       </div>
       <div class="page-footer-col">
@@ -132,8 +145,7 @@
       </div>
     </div>
   </footer>
-  <input type="checkbox" id="calc-modal">
-  <label for="calc-modal" class="modal-overlay">
+  <div class="modal-overlay" data-close-modal="true">
     <div class="modal">
       <div id="calc-form" class="form form--modal">
         <form action="" class="form-main">
@@ -173,9 +185,9 @@
           <b class="form-cost">0</b>
         </div>
       </div>
-      <label for="calc-modal" class="modal-close">&times;</label>
+      <button class="modal-close" data-close-modal="true">&times;</button>
     </div>
-  </label>
+  </div>
   <script src="javascripts/jquery.min.js"></script>
   <script src="javascripts/app.min.js"></script>
 </body>

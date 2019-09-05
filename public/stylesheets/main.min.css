@@ -1554,7 +1554,7 @@ template {
         -ms-flex-direction: row;
             flex-direction: row;
         height: auto; } }
-  html[class="ie"] .page-header {
+  html[class~="ie"] .page-header {
     display: none;
     visibility: hidden;
     opacity: 0; }
@@ -1699,7 +1699,7 @@ template {
     @media (min-width: 992px) {
       .page-promo-form {
         display: block; } }
-  html[class="ie"] .page-promo {
+  html[class~="ie"] .page-promo {
     display: none;
     visibility: hidden;
     opacity: 0; }
@@ -1971,7 +1971,7 @@ template {
     @media (min-width: 992px) {
       .page-main-button--mobile {
         display: none; } }
-  html[class="ie"] .page-main {
+  html[class~="ie"] .page-main {
     display: none;
     visibility: hidden;
     opacity: 0; }
@@ -2294,7 +2294,7 @@ template {
           left: -1.2vw;
           width: 1vw;
           height: 0.7vw; } }
-  html[class="ie"] .page-footer {
+  html[class~="ie"] .page-footer {
     display: none;
     visibility: hidden;
     opacity: 0; }
@@ -2339,7 +2339,7 @@ template {
       color: rgba(0, 136, 204, 0.7); }
     .modal-close:active, .modal-close--active {
       color: rgba(0, 136, 204, 0.7); }
-  html[class="ie"] .modal {
+  html[class~="ie"] .modal {
     display: none;
     visibility: hidden;
     opacity: 0; }
@@ -2359,15 +2359,32 @@ template {
   animation-fill-mode: forwards; }
 
 .support {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
   color: #ffffff;
   background-color: #0088CC;
   text-align: center; }
+  html[class~="ie"] .support {
+    display: block; }
+  .support-inner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    width: 100%; }
   .support-list {
     display: inline-block; }
   .support-link {
     margin-right: 15px;
     margin-left: 15px;
     display: inline-block; }
+    html:not(.touch) .support-link:hover {
+      opacity: 0.6; }
+    .support-link:active, .support-link--active {
+      opacity: 0.6; }
     .support-link img {
       display: block;
       width: 60px;

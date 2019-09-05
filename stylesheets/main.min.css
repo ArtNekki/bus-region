@@ -56,9 +56,9 @@ body {
 
 @keyframes move-mobile-bus {
   80% {
-    top: -2.7vw;
+    top: -10vw;
     left: 40vw;
-    transform: rotate3d(0, 0, 1, 7deg); } }
+    transform: rotate3d(0, 0, 1, 8deg); } }
 
 @keyframes move-bus {
   100% {
@@ -1554,6 +1554,10 @@ template {
         -ms-flex-direction: row;
             flex-direction: row;
         height: auto; } }
+  html[class~="ie"] .page-header {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
 
 .logo img {
   width: 135px;
@@ -1695,6 +1699,10 @@ template {
     @media (min-width: 992px) {
       .page-promo-form {
         display: block; } }
+  html[class~="ie"] .page-promo {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
 
 .form {
   margin-top: 1.2vw;
@@ -1828,7 +1836,8 @@ template {
 
 .page-main {
   position: relative;
-  padding-top: 59vw;
+  margin-top: 14vw;
+  padding-top: 52vw;
   padding-bottom: 45vw;
   text-align: center;
   background-image: url("../images/content/bg-mobile.svg");
@@ -1844,7 +1853,7 @@ template {
       background-position: -35px 0; } }
   .page-main-mobile-bus {
     position: absolute;
-    top: 2.65vw;
+    top: -4.65vw;
     left: 4.15vw;
     transform: rotate3d(0, 0, 1, 0deg);
     display: block;
@@ -1856,6 +1865,9 @@ template {
     animation-delay: 1.5s;
     animation-duration: 3s;
     animation-fill-mode: forwards; }
+    @media (min-width: 992px) {
+      .page-main-mobile-bus {
+        display: none; } }
     .page-main-mobile-bus i {
       position: relative;
       transform: translate3d(21.7vw, -2.7vw, 0);
@@ -1903,7 +1915,7 @@ template {
         animation-delay: 3.5s;
         animation-fill-mode: forwards; } }
   .page-main-title {
-    margin-top: 5vw;
+    margin-top: 0;
     margin-bottom: 7vw;
     font-size: 5vw;
     line-height: 6vw;
@@ -1959,6 +1971,10 @@ template {
     @media (min-width: 992px) {
       .page-main-button--mobile {
         display: none; } }
+  html[class~="ie"] .page-main {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
 
 @media (min-width: 992px) {
   .locations {
@@ -2101,7 +2117,7 @@ template {
           order: 1; } }
   .detail--bus::before {
     width: 16vw;
-    height: 8vw;
+    height: 8.1vw;
     background-image: url("../images/svg/bus-sm.svg"); }
     @media (min-width: 992px) {
       .detail--bus::before {
@@ -2127,7 +2143,7 @@ template {
       margin-left: 3.5vw; } }
   .detail--location::before {
     left: -1.4vw;
-    width: 18vw;
+    width: 18.1vw;
     height: 13vw;
     background-image: url("../images/svg/mark.svg"); }
     @media (min-width: 992px) {
@@ -2139,7 +2155,7 @@ template {
       margin-left: 3.8vw; } }
   .detail--sms::before {
     width: 10vw;
-    height: 11vw;
+    height: 11.2vw;
     background-image: url("../images/svg/phone.svg"); }
     @media (min-width: 992px) {
       .detail--sms::before {
@@ -2278,6 +2294,10 @@ template {
           left: -1.2vw;
           width: 1vw;
           height: 0.7vw; } }
+  html[class~="ie"] .page-footer {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
 
 .modal {
   position: relative;
@@ -2319,6 +2339,10 @@ template {
       color: rgba(0, 136, 204, 0.7); }
     .modal-close:active, .modal-close--active {
       color: rgba(0, 136, 204, 0.7); }
+  html[class~="ie"] .modal {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
 
 .page--modal-opened .modal-overlay {
   display: -ms-flexbox;
@@ -2333,3 +2357,38 @@ template {
   animation-delay: 0.5s;
   animation-duration: 1s;
   animation-fill-mode: forwards; }
+
+.support {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+  color: #ffffff;
+  background-color: #0088CC;
+  text-align: center; }
+  html[class~="ie"] .support {
+    display: block; }
+  .support-inner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    width: 100%; }
+  .support-list {
+    display: inline-block; }
+  .support-link {
+    margin-right: 15px;
+    margin-left: 15px;
+    display: inline-block; }
+    html:not(.touch) .support-link:hover {
+      opacity: 0.6; }
+    .support-link:active, .support-link--active {
+      opacity: 0.6; }
+    .support-link img {
+      display: block;
+      width: 60px;
+      height: 60px; }
+  .support p {
+    font-size: 18px;
+    line-height: 30px; }

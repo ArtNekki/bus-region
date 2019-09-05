@@ -32,6 +32,10 @@
     background-image: url("../images/svg/bus-mobile.svg");
     background-repeat: no-repeat;
 
+    .page--loading & {
+      animation-play-state: paused !important;
+    }
+
     animation-name: move-mobile-bus;
     animation-delay: 1.5s;
     animation-duration: 3s;
@@ -51,6 +55,10 @@
       visibility: hidden;
       background-image: url("../images/svg/bus-label-mobile.svg");
       background-repeat: no-repeat;
+
+      .page--loading & {
+        animation-play-state: paused !important;
+      }
 
       animation: fade-in;
       animation-duration: 0.5s;
@@ -73,6 +81,10 @@
       background-image: url("../images/svg/bus.svg");
       background-repeat: no-repeat;
 
+      .page--loading & {
+        animation-play-state: paused !important;
+      }
+
       animation-name: move-bus;
       animation-delay: 0.5s;
       animation-duration: 3s;
@@ -91,6 +103,10 @@
         visibility: hidden;
         background-image: url("../images/svg/bus-label.svg");
         background-repeat: no-repeat;
+
+        .page--loading & {
+          animation-play-state: paused !important;
+        }
 
         animation: fade-in;
         animation-duration: 0.5s;

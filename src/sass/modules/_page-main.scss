@@ -1,6 +1,7 @@
 .page-main {
   position: relative;
-  padding-top: 59vw;
+  margin-top: 14vw;
+  padding-top: 52vw;
   padding-bottom: 45vw;
   text-align: center;
   background-image: url("../images/content/bg-mobile.svg");
@@ -22,8 +23,7 @@
 
   &-mobile-bus {
     position: absolute;
-    // transform: translate3d(4.1vw, 2.5vw, 0);
-    top: 2.65vw;
+    top: -4.65vw;
     left: 4.15vw;
     transform: rotate3d(0, 0, 1, 0deg);
     display: block;
@@ -36,6 +36,10 @@
     animation-delay: 1.5s;
     animation-duration: 3s;
     animation-fill-mode: forwards;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
 
     i {
       position: relative;
@@ -97,7 +101,7 @@
   }
 
   &-title {
-    margin-top: 5vw;
+    margin-top: 0;
     margin-bottom: 7vw;
     font-size: 5vw;
     line-height: 6vw;

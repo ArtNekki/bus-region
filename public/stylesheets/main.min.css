@@ -56,9 +56,9 @@ body {
 
 @keyframes move-mobile-bus {
   80% {
-    top: -2.7vw;
+    top: -10vw;
     left: 40vw;
-    transform: rotate3d(0, 0, 1, 7deg); } }
+    transform: rotate3d(0, 0, 1, 8deg); } }
 
 @keyframes move-bus {
   100% {
@@ -1828,7 +1828,8 @@ template {
 
 .page-main {
   position: relative;
-  padding-top: 59vw;
+  margin-top: 14vw;
+  padding-top: 52vw;
   padding-bottom: 45vw;
   text-align: center;
   background-image: url("../images/content/bg-mobile.svg");
@@ -1844,7 +1845,7 @@ template {
       background-position: -35px 0; } }
   .page-main-mobile-bus {
     position: absolute;
-    top: 2.65vw;
+    top: -4.65vw;
     left: 4.15vw;
     transform: rotate3d(0, 0, 1, 0deg);
     display: block;
@@ -1856,6 +1857,9 @@ template {
     animation-delay: 1.5s;
     animation-duration: 3s;
     animation-fill-mode: forwards; }
+    @media (min-width: 992px) {
+      .page-main-mobile-bus {
+        display: none; } }
     .page-main-mobile-bus i {
       position: relative;
       transform: translate3d(21.7vw, -2.7vw, 0);
@@ -1903,7 +1907,7 @@ template {
         animation-delay: 3.5s;
         animation-fill-mode: forwards; } }
   .page-main-title {
-    margin-top: 5vw;
+    margin-top: 0;
     margin-bottom: 7vw;
     font-size: 5vw;
     line-height: 6vw;
@@ -2101,7 +2105,7 @@ template {
           order: 1; } }
   .detail--bus::before {
     width: 16vw;
-    height: 8vw;
+    height: 8.1vw;
     background-image: url("../images/svg/bus-sm.svg"); }
     @media (min-width: 992px) {
       .detail--bus::before {
@@ -2127,7 +2131,7 @@ template {
       margin-left: 3.5vw; } }
   .detail--location::before {
     left: -1.4vw;
-    width: 18vw;
+    width: 18.1vw;
     height: 13vw;
     background-image: url("../images/svg/mark.svg"); }
     @media (min-width: 992px) {
@@ -2139,7 +2143,7 @@ template {
       margin-left: 3.8vw; } }
   .detail--sms::before {
     width: 10vw;
-    height: 11vw;
+    height: 11.2vw;
     background-image: url("../images/svg/phone.svg"); }
     @media (min-width: 992px) {
       .detail--sms::before {

@@ -1,20 +1,22 @@
 .page-main {
   position: relative;
   margin-top: 14vw;
-  padding-top: 52vw;
+  padding-top: 57vw;
   padding-bottom: 45vw;
   text-align: center;
   background-image: url("../images/content/bg-mobile.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  overflow-x: hidden;
+  overflow-y: visible;
 
   @include media-breakpoint-up(lg) {
-    margin-top: 29vw;
+    margin-top: 25vw;
     padding-top: 25.6vw;
     padding-bottom: 40vw;
     background-image: url("../images/content/bg.svg");
     background-size: contain;
-    background-position: -35px 0;
+    background-position: -1.5vw 4vw;
   }
 
   &-inner {
@@ -72,7 +74,7 @@
 
     @include media-breakpoint-up(lg) {
       position: absolute;
-      top: -5.5vw;
+      top: -1.55vw;
       left: 14.1vw;
       transform: translate3d(-100vw, 18vw, 0);
       display: block;
@@ -124,7 +126,7 @@
     font-weight: 400;
 
     @include media-breakpoint-up(lg) {
-      margin-top: 0;
+      margin-top: 4vw;
       margin-bottom: 2.6vw;
       font-size: 2.8vw;
       line-height: 3.5vw;

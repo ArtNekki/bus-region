@@ -45,6 +45,12 @@
       color: rgba($blue, 0.7);
     }
   }
+
+  html[class="ie"] & {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 .page--modal-opened .modal-overlay {

@@ -1,0 +1,35 @@
+.support {
+  // display: table;
+  color: $white;
+  background-color: $blue;
+  text-align: center;
+
+  &-inner {
+    // position: absolute;
+  }
+
+  &-list {
+    display: inline-block;
+  }
+
+  &-link {
+    margin-right: 15px;
+    margin-left: 15px;
+    display: inline-block;
+
+    img {
+      display: block;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  h1 {
+
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

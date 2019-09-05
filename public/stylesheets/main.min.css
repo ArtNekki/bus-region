@@ -1554,6 +1554,10 @@ template {
         -ms-flex-direction: row;
             flex-direction: row;
         height: auto; } }
+  html[class="ie"] .page-header {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
 
 .logo img {
   width: 135px;
@@ -1695,6 +1699,10 @@ template {
     @media (min-width: 992px) {
       .page-promo-form {
         display: block; } }
+  html[class="ie"] .page-promo {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
 
 .form {
   margin-top: 1.2vw;
@@ -1963,6 +1971,10 @@ template {
     @media (min-width: 992px) {
       .page-main-button--mobile {
         display: none; } }
+  html[class="ie"] .page-main {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
 
 @media (min-width: 992px) {
   .locations {
@@ -2282,6 +2294,10 @@ template {
           left: -1.2vw;
           width: 1vw;
           height: 0.7vw; } }
+  html[class="ie"] .page-footer {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
 
 .modal {
   position: relative;
@@ -2323,6 +2339,10 @@ template {
       color: rgba(0, 136, 204, 0.7); }
     .modal-close:active, .modal-close--active {
       color: rgba(0, 136, 204, 0.7); }
+  html[class="ie"] .modal {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
 
 .page--modal-opened .modal-overlay {
   display: -ms-flexbox;
@@ -2337,3 +2357,21 @@ template {
   animation-delay: 0.5s;
   animation-duration: 1s;
   animation-fill-mode: forwards; }
+
+.support {
+  color: #ffffff;
+  background-color: #0088CC;
+  text-align: center; }
+  .support-list {
+    display: inline-block; }
+  .support-link {
+    margin-right: 15px;
+    margin-left: 15px;
+    display: inline-block; }
+    .support-link img {
+      display: block;
+      width: 60px;
+      height: 60px; }
+  .support p {
+    font-size: 18px;
+    line-height: 30px; }

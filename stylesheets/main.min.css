@@ -1529,7 +1529,8 @@ template {
   background-color: #f9f9f9;
   background-repeat: no-repeat;
   background-size: 1702px auto;
-  background-position: -88px 60px; }
+  background-position: -88px 60px;
+  overflow-x: hidden; }
 
 .page-header {
   padding-top: 25px;
@@ -1865,6 +1866,8 @@ template {
     animation-delay: 1.5s;
     animation-duration: 3s;
     animation-fill-mode: forwards; }
+    .page--loading .page-main-mobile-bus {
+      animation-play-state: paused !important; }
     @media (min-width: 992px) {
       .page-main-mobile-bus {
         display: none; } }
@@ -1882,6 +1885,8 @@ template {
       animation-duration: 0.5s;
       animation-delay: 4s;
       animation-fill-mode: forwards; }
+      .page--loading .page-main-mobile-bus i {
+        animation-play-state: paused !important; }
   .page-main-bus {
     display: none; }
     @media (min-width: 992px) {
@@ -1898,7 +1903,9 @@ template {
         animation-name: move-bus;
         animation-delay: 0.5s;
         animation-duration: 3s;
-        animation-fill-mode: forwards; } }
+        animation-fill-mode: forwards; }
+        .page--loading .page-main-bus {
+          animation-play-state: paused !important; } }
     @media (min-width: 992px) {
       .page-main-bus i {
         position: relative;
@@ -1913,7 +1920,9 @@ template {
         animation: fade-in;
         animation-duration: 0.5s;
         animation-delay: 3.5s;
-        animation-fill-mode: forwards; } }
+        animation-fill-mode: forwards; }
+        .page--loading .page-main-bus i {
+          animation-play-state: paused !important; } }
   .page-main-title {
     margin-top: 0;
     margin-bottom: 7vw;

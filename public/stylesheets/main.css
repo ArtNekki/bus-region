@@ -56,9 +56,9 @@ body {
 
 @keyframes move-mobile-bus {
   80% {
-    top: -10vw;
+    top: -0.5vw;
     left: 40vw;
-    transform: rotate3d(0, 0, 1, 8deg); } }
+    transform: rotate3d(0, 0, 1, 7deg); } }
 
 @keyframes move-bus {
   100% {
@@ -1836,12 +1836,13 @@ template {
 
 .page-main {
   position: relative;
-  margin-top: 14vw;
+  margin-top: 0;
   padding-top: 57vw;
   padding-bottom: 45vw;
   text-align: center;
   background-image: url("../images/content/bg-mobile.svg");
   background-size: 100% auto;
+  background-position: -0.2vw 9.5vw;
   background-repeat: no-repeat;
   overflow-x: hidden;
   overflow-y: visible; }
@@ -1855,7 +1856,7 @@ template {
       background-position: -1.5vw 4vw; } }
   .page-main-mobile-bus {
     position: absolute;
-    top: -4.65vw;
+    top: 4.9vw;
     left: 4.15vw;
     transform: rotate3d(0, 0, 1, 0deg);
     display: block;
@@ -1925,8 +1926,8 @@ template {
         .page--loading .page-main-bus i {
           animation-play-state: paused !important; } }
   .page-main-title {
-    margin-top: 0;
-    margin-bottom: 7vw;
+    margin-top: 12vw;
+    margin-bottom: 4vw;
     font-size: 5vw;
     line-height: 6vw;
     font-weight: 400; }

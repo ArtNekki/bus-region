@@ -56,9 +56,9 @@ body {
 
 @keyframes move-mobile-bus {
   80% {
-    top: -10vw;
+    top: -0.5vw;
     left: 40vw;
-    transform: rotate3d(0, 0, 1, 8deg); } }
+    transform: rotate3d(0, 0, 1, 7deg); } }
 
 @keyframes move-bus {
   100% {
@@ -1529,8 +1529,7 @@ template {
   background-color: #f9f9f9;
   background-repeat: no-repeat;
   background-size: 1702px auto;
-  background-position: -88px 60px;
-  overflow-x: hidden; }
+  background-position: -88px 60px; }
 
 .page-header {
   padding-top: 25px;
@@ -1837,24 +1836,27 @@ template {
 
 .page-main {
   position: relative;
-  margin-top: 14vw;
-  padding-top: 52vw;
+  margin-top: 0;
+  padding-top: 57vw;
   padding-bottom: 45vw;
   text-align: center;
   background-image: url("../images/content/bg-mobile.svg");
   background-size: 100% auto;
-  background-repeat: no-repeat; }
+  background-position: -0.2vw 9.5vw;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  overflow-y: visible; }
   @media (min-width: 992px) {
     .page-main {
-      margin-top: 29vw;
+      margin-top: 25vw;
       padding-top: 25.6vw;
       padding-bottom: 40vw;
       background-image: url("../images/content/bg.svg");
       background-size: contain;
-      background-position: -35px 0; } }
+      background-position: -1.5vw 4vw; } }
   .page-main-mobile-bus {
     position: absolute;
-    top: -4.65vw;
+    top: 4.9vw;
     left: 4.15vw;
     transform: rotate3d(0, 0, 1, 0deg);
     display: block;
@@ -1892,7 +1894,7 @@ template {
     @media (min-width: 992px) {
       .page-main-bus {
         position: absolute;
-        top: -5.5vw;
+        top: -1.55vw;
         left: 14.1vw;
         transform: translate3d(-100vw, 18vw, 0);
         display: block;
@@ -1924,14 +1926,14 @@ template {
         .page--loading .page-main-bus i {
           animation-play-state: paused !important; } }
   .page-main-title {
-    margin-top: 0;
-    margin-bottom: 7vw;
+    margin-top: 12vw;
+    margin-bottom: 4vw;
     font-size: 5vw;
     line-height: 6vw;
     font-weight: 400; }
     @media (min-width: 992px) {
       .page-main-title {
-        margin-top: 0;
+        margin-top: 4vw;
         margin-bottom: 2.6vw;
         font-size: 2.8vw;
         line-height: 3.5vw; } }

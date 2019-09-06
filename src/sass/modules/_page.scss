@@ -3,10 +3,10 @@
   &--modal-opened {
       overflow: hidden;
 
-      body {
-        position: fixed;
-      }
+    body {
+      position: fixed;
     }
+  }
 }
 
 .page-inner {
@@ -15,4 +15,8 @@
   background-repeat: no-repeat;
   background-size: 1702px auto;
   background-position: -88px 60px;
+
+  html[class~="ie"] & {
+    position: fixed;
+  }
 }

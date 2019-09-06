@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="stylesheets/main.css">
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-    function cth(c){document.documentElement.classList.add(c)}
+    function cth(c){document.documentElement.className += ' ' + c}
     'ontouchstart' in window?cth('touch'):cth('no-touch');
     if(typeof InstallTrigger!=='undefined')cth('firefox');
     if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
@@ -149,8 +149,8 @@
   </footer>
   <div class="support">
     <div class="support-inner">
-      <h1>Извините, этот браузер больше не поддерживается!</h1>
-      <p>Используйте более современную версию, или <br /> скачайте альтернативный вариант:</p>
+      <h1>Извините, браузер не поддерживается!</h1>
+      <p>Используйте более современную версию, или <br /> установите альтернативный вариант:</p>
       <div class="support-list">
         <a href="https://www.google.com/intl/ru_ru/chrome/" class="support-link">
           <img src="images/svg/chrome.svg" alt="Chrome">

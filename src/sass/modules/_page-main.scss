@@ -139,6 +139,11 @@
         display: block;
       }
     }
+
+    i {
+      font-family: $utils-font-family;
+      font-style: normal;
+    }
   }
 
   &-text {

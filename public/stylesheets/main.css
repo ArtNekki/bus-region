@@ -29,6 +29,18 @@
   font-weight: 700;
   font-style: normal; }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto-bold.woff2") format("woff2"), url("../fonts/roboto-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
 html {
   box-sizing: border-box; }
 
@@ -1940,6 +1952,9 @@ template {
     @media (min-width: 992px) {
       .page-main-title br {
         display: block; } }
+    .page-main-title i {
+      font-family: "Roboto";
+      font-style: normal; }
   .page-main-text {
     margin-top: 22vw;
     margin-bottom: 5vw;

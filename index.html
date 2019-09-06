@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="stylesheets/main.css">
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-    function cth(c){document.documentElement.classList.add(c)}
+    function cth(c){document.documentElement.className += ' ' + c}
     'ontouchstart' in window?cth('touch'):cth('no-touch');
     if(typeof InstallTrigger!=='undefined')cth('firefox');
     if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
@@ -85,7 +85,7 @@
         <span class="page-main-bus">
           <i></i>
         </span>
-        <h1 class="page-main-title">Доставляем по республике <br /> и за её пределы от <b>250</b> ₽</h1>
+        <h1 class="page-main-title">Доставляем по республике <br /> и за её пределы от <b>250</b> <i>&#8381;</i></h1>
         <a href="#calc-form" data-scroll="data-scroll" class="page-main-button page-main-button--desktop animated duration-4s" data-animation="pulse">Рассчитать доставку</a>
         <button type="button" data-open-modal class="page-main-button page-main-button--mobile animated duration-4s" data-animation="pulse">Рассчитать доставку</button>
         <p class="page-main-text">Узнайте подробнее в одном <br /> из наших офисов</p>
@@ -149,8 +149,8 @@
   </footer>
   <div class="support">
     <div class="support-inner">
-      <h1>Извините, этот браузер больше не поддерживается!</h1>
-      <p>Используйте более современную версию, или <br /> скачайте альтернативный вариант:</p>
+      <h1>Извините, браузер не поддерживается!</h1>
+      <p>Используйте более современную версию, или <br /> установите альтернативный вариант:</p>
       <div class="support-list">
         <a href="https://www.google.com/intl/ru_ru/chrome/" class="support-link">
           <img src="images/svg/chrome.svg" alt="Chrome">

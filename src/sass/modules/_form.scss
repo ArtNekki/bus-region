@@ -69,6 +69,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    outline: none;
 
     @include media-breakpoint-up(lg) {
       margin-top: 0.6vw;
@@ -88,6 +89,7 @@
 
     @include active {
       background-color: lighten($yellow, 10%);
+      box-shadow: 0 0 10px rgba($yellow, 0.6);
     }
 
     &:disabled {

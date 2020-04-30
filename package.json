@@ -29,7 +29,7 @@
     "gulp-sass": "^2.0.1",
     "gulp-size": "^1.2.1",
     "gulp-uglify": "^1.2.0",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   },
   "dependencies": {
     "gulp-cheerio": "^0.6.3",
